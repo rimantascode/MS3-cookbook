@@ -1,0 +1,4 @@
+{% extends 'base.html'%} {% block content %}
+<h1>this another test which is testing the database connection...</h1>
+{%for ingrediants in recipe %}
+<img src="{{ingrediants.picture_url}}" />{%endfor%} {%endblock%}
