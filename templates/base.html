@@ -3,10 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
   </head>
 
   <body>
+    <!--This NAVBAR is for the bigger screens-->
+    <nav>
+      <div class="nav-wrapper my-nav">
+        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="centered hide-on-med-and-down">
+          <li class="nav-links dropdown-trigger" data-target="dropdown1">
+            <a href="#"
+              >POULTRY<i class="material-icons right">arrow_drop_down</i></a
+            >
+          </li>
+          <li class="nav-links">
+            <a class="dropdown-trigger" href="#!" data-target="dropdown4"
+              >RED MEAT<i class="material-icons right">arrow_drop_down</i></a
+            >
+          </li>
+          <li class="nav-links"><a href="#">PORK</a></li>
+          <li class="nav-links"><a href="#">SEA FOOD</a></li>
+          <li class="nav-links"><a href="#">SALAD</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--This peace navbar peace is for smaller secreens -->
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <a class="dropdown-trigger" href="#!" data-target="dropdown2"
+          >POULTRY<i class="material-icons right">arrow_drop_down</i></a
+        >
+      </li>
+      <li>
+        <a class="dropdown-trigger" href="#!" data-target="dropdown3"
+          >RED MEAT<i class="material-icons right">arrow_drop_down</i></a
+        >
+      </li>
+      <li><a href="collapsible.html">PORK</a></li>
+      <li><a href="mobile.html">SEA FOOD</a></li>
+      <li><a href="mobile.html">SALAD</a></li>
+    </ul>
+    <ul id="dropdown1" class="dropdown-content">
+      <li class="nav-link-for-dropdown"><a href="#!">Chicken</a></li>
+      <li class="nav-link-for-dropdown"><a href="#!">Turkey</a></li>
+      <li class="divider"></li>
+      <li class="nav-link-for-dropdown"><a href="#!">Duck</a></li>
+    </ul>
+    <ul id="dropdown2" class="dropdown-content">
+      <li class="nav-link-for-dropdown"><a href="#!">Chicken</a></li>
+      <li class="nav-link-for-dropdown"><a href="#!">Turkey</a></li>
+      <li class="divider"></li>
+      <li class="nav-link-for-dropdown"><a href="#!">Duck</a></li>
+    </ul>
+    <ul id="dropdown3" class="dropdown-content">
+      <li class="nav-link-for-dropdown"><a href="#!">Lamb</a></li>
+      <li class="nav-link-for-dropdown"><a href="#!">Beef</a></li>
+      <li class="divider"></li>
+      <li class="nav-link-for-dropdown"><a href="#!">Duck</a></li>
+    </ul>
+    <ul id="dropdown4" class="dropdown-content">
+      <li class="nav-link-for-dropdown"><a href="#!">Lamb</a></li>
+      <li class="nav-link-for-dropdown"><a href="#!">Beef</a></li>
+      <li class="divider"></li>
+      <li class="nav-link-for-dropdown"><a href="#!">Duck</a></li>
+    </ul>
     {% block content %} {% endblock %}
+    <script>
+      $(document).ready(function () {
+        $(".sidenav").sidenav();
+        $(".dropdown-trigger").dropdown();
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>
