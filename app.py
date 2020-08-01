@@ -14,7 +14,7 @@ mongo = PyMongo(app)
 @app.route('/index')
 def get_tasks():
     return render_template("index.html",
-                           recipe=mongo.db.difficulty.find())
+                           recipe=mongo.db.recipe.find())
 
 
 if __name__ == '__main__':

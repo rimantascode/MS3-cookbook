@@ -1,4 +1,29 @@
 {% extends 'base.html'%} {% block content %}
-<div class="container picture-area"></div>
-{%for ingrediants in recipe %}
-<img src="{{ingrediants.picture_url}}" />{{ingrediants}}{%endfor%} {%endblock%}
+<div class="col s12 container picture-area"></div>
+<div class="col s12 container search-results">
+  <div class="col s12 search-result-bar"></div>
+  <div class="col s12 search-result-bar"></div>
+  {%for ingrediants in recipe %}
+  <div class="search-results-list">
+    <div class="col s12 m7">
+      <div class="card horizontal">
+        <div class="card-image">
+          <img width="150" src="{{ingrediants.picture_url}}" />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p>
+              I am a very simple card. I am good at containing small bits of
+              information.
+            </p>
+          </div>
+          <div class="card-action">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<img src="{{ingrediants.picture_url}}" />-->{{ingrediants}}{%endfor%}{%endblock%}

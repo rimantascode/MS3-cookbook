@@ -30,5 +30,52 @@ font-family: "Roboto", sans-serif;
 }
 .picture-area {
   border: 1px solid green;
-  height: 30vh;
+  height: 35vh;
 }
+/*
+<div
+  class="container search-results"
+  > <div
+  class="search-result-bar"
+  > </div
+  > <div
+  class="search-results-list"
+  > </div
+  > 
+  */
+.search-results {
+  border: 1px solid red;
+}
+.search-result-bar {
+  border: 1px solid brown;
+  height: 55px;
+}
+.search-results-list {
+  border: 1px solid black;
+  height: 400px;
+}
+
+.image-container {
+  height: 126px;
+  width: 126px;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+/*.card-image {
+  padding: 0;
+  margin: 0;
+  height: 150px;
+  border: 1px solid red;
+  border-top-left-radius: 75px;
+  border-bottom-left-radius: 75px;
+}
+
+.card-content {
+  padding: 0;
+  margin: 0;
+  height: 150px;
+  border: 1px solid green;
+  border-top-right-radius: 75px;
+  border-bottom-right-radius: 75px;
+}
+*/
