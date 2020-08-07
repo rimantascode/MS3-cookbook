@@ -20,6 +20,11 @@ def get_tasks():
                            recipe=mongo.db.recipe.find(), s=s)
 
 
+@app.route('/dish')
+def dish():
+    return render_template("dish.html")
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),

@@ -188,7 +188,16 @@ ul.share-links {
   font-family: "Permanent Marker", sans-serif;
   padding-left: 10px;
 }
+/* ------------------------------------------------ dish.html----- */
+.recepie {
 
+}
+.ingrediants-required {
+  border: 2px solid green;
+}
+.cooking-description {
+  border: 2px solid red;
+}
 @media only screen and (max-width: 600px) {
   .card.horizontal .card-image {
     max-width: 100% !important;
