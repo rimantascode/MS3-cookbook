@@ -41,7 +41,8 @@ font-family: "Roboto", sans-serif;
 }
 .search-result-bar {
   border: 1px solid brown;
-  height: 55px;
+  height: 56px;
+  background-color: #f5f5dc;
 }
 .search-results-list {
   border: 1px solid black;
@@ -118,6 +119,60 @@ ul.a:not(.browser-default) > li {
 }
 ul.a:not(.browser-default) {
   padding: 20px !important;
+}
+
+/* ------------------------------------------------ add button and share links ----- */
+.add-button {
+  vertical-align: middle;
+  margin-top: 7px;
+  margin-left: 10px;
+}
+.share {
+  float: right;
+  display: flex;
+  height: 56px;
+  margin-right: 25px;
+}
+.share-div {
+  width: 125px;
+  position: relative;
+  height: 56px;
+}
+.share-div h4 {
+  font-family: "Permanent Marker", sans-serif;
+  color: #bdbcbc;
+  line-height: 56px;
+}
+.share-links-container {
+  float: left;
+  position: relative;
+  height: 56px;
+}
+.share h4 {
+  display: inline;
+}
+.circle-around-social-links {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #ff9900;
+  border: 2px solid #ffffff;
+  margin-top: 10px;
+}
+
+ul.share-links li {
+  display: inline-block;
+}
+ul.share-links {
+  margin: 0;
+}
+.share-links i {
+  letter-spacing: 25px;
+  font-size: 24px;
+  padding-top: 4px;
+  padding-left: 5px;
+  color: #edebeb;
 }
 
 @media only screen and (max-width: 600px) {

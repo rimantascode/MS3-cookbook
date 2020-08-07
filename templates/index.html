@@ -1,13 +1,32 @@
 {% extends 'base.html'%} {% block content %}
+<!-- The main picture area -->
 <div class="col s12 container picture-area"></div>
+<!-- search results, those results will be the desplayd in this main page-->
 <div class="col s12 container search-results">
-	<div class="col s12 search-result-bar"></div>
+	<div class="col s12 search-result-bar">
+	<a class="btn-floating btn-medium waves-effect waves-light red add-button"><i class="material-icons">add</i></a>
+    <div class="share">
+    <div class="share-div">
+	<h4>Share</h4>
+    </div>
+    <div class="share-links-container">
+    <ul class="share-links">
+    <div class="circle-around-social-links">
+    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+    </div>
+	<div class="circle-around-social-links">
+    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+    </div>
+	<div class="circle-around-social-links">
+	<li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+    </div>
+    </ul>
+    </div>
+    </div>
+    </div>
 	<div class="col s12 search-result-bar"></div>
 	{%for ingrediants in recipe %}
 	<div class="search-results-list">
-
-
-
 		<div class="card horizontal z-depth-4">
 			<div class="row">
 				<div class=" col m5 l5 card-image ">
@@ -15,7 +34,6 @@
           </div>
 					<div class=" col m7 l7 card-stacked">
 						<div class="card-content">
-
 							<div class="info-window">
 								<h4 class="title">{{ingrediants.name}}</h4>
 								<div class="info-container">
