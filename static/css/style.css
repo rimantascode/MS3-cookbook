@@ -3,6 +3,7 @@
 font-family: "Permanent Marker", cursive;
 font-family: "Roboto", sans-serif;
 */
+/* ------------------------------------------------ NAV BAR ----- */
 .my-nav {
   background-color: #964600;
   text-align: center;
@@ -28,21 +29,13 @@ font-family: "Roboto", sans-serif;
   color: #f7f7f7;
   letter-spacing: 1px;
 }
+/* ------------------------------------------------ main picture area ----- */
 .picture-area {
   border: 1px solid green;
   height: 35vh;
 }
-/*
-<div
-  class="container search-results"
-  > <div
-  class="search-result-bar"
-  > </div
-  > <div
-  class="search-results-list"
-  > </div
-  > 
-  */
+
+/* ------------------------------------------------ home page and search results  ----- */
 .search-results {
   border: 1px solid red;
 }
@@ -61,21 +54,78 @@ font-family: "Roboto", sans-serif;
   margin: 0 auto;
   margin-top: 12px;
 }
-/*.card-image {
+
+/* ------------------------------------------------ serch reults by cards ----- */
+.card.horizontal {
+  border-radius: 30px;
+}
+.round-image {
+  border-top-left-radius: 30px !important;
+  border-bottom-left-radius: 30px !important;
+}
+.info-window {
+  border: 1px solid brown;
+}
+.short-info {
+  height: 60px;
+  width: 110px;
+  border: 1px solid green;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
   padding: 0;
-  margin: 0;
-  height: 150px;
-  border: 1px solid red;
-  border-top-left-radius: 75px;
-  border-bottom-left-radius: 75px;
+}
+.circles {
+  height: 40px;
+  width: 40px;
+  background-color: #ff9900;
+
+  float: left;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+}
+.circles i {
+  font-size: 34px;
+  color: #f7f7f7;
+  margin: 0 auto;
+  padding: 0;
+}
+.circles p {
+  font-size: 2px;
+}
+.data {
+  font-size: 20px;
+  width: 30px;
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+.title {
+  text-align: center;
+}
+.info-container {
+  margin: 0 auto;
+  position: relative;
+  width: 224px;
+}
+ul.a {
+  display: inline-block;
 }
 
-.card-content {
-  padding: 0;
-  margin: 0;
-  height: 150px;
-  border: 1px solid green;
-  border-top-right-radius: 75px;
-  border-bottom-right-radius: 75px;
+ul.a:not(.browser-default) > li {
+  list-style-type: circle !important;
 }
-*/
+ul.a:not(.browser-default) {
+  padding: 20px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .card.horizontal .card-image {
+    max-width: 100% !important;
+  }
+  .round-image {
+    border-top-right-radius: 30px !important;
+    border-bottom-left-radius: 0px !important;
+  }
+}

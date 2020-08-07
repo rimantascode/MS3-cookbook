@@ -13,8 +13,11 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/index')
 def get_tasks():
+    list = mongo.db.recipe.find()
+    for n in list:
+        s = n["ingrediants"].split(",")
     return render_template("index.html",
-                           recipe=mongo.db.recipe.find())
+                           recipe=mongo.db.recipe.find(), s=s)
 
 
 if __name__ == '__main__':
