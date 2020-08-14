@@ -31,13 +31,15 @@ font-family: "Roboto", sans-serif;
 }
 /* ------------------------------------------------ main picture area ----- */
 .picture-area {
-  border: 1px solid green;
-  height: 35vh;
+  background-color: #666666;
+}
+.picture-area img {
+  display: block;
+  margin: auto;
 }
 
 /* ------------------------------------------------ home page and search results  ----- */
 .search-results {
-  border: 1px solid red;
 }
 .search-result-bar {
   border: 1px solid brown;
@@ -177,7 +179,7 @@ ul.share-links {
 /* ------------------------------------------------ list icon----- */
 .list-icon {
   background-color: #f7f7f7;
-  margin: 0;
+  margin-bottom: 15px;
 }
 .list-icon h5 {
   margin: 0;
@@ -189,12 +191,16 @@ ul.share-links {
   padding-left: 10px;
 }
 /* ------------------------------------------------ dish.html----- */
+.recipe-details {
+  margin-bottom: 15px;
+}
 .ingrediants-required {
   margin: 0;
   padding: 0;
 }
 .cooking-description {
 }
+
 .ingrediants {
   border: 1px solid black;
   border-radius: 15px;

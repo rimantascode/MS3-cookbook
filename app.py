@@ -25,7 +25,7 @@ def dish():
     list = mongo.db.recipe.find()
     for n in list:
         s = n["ingrediants"].split(",")
-    return render_template("dish.html", recipe=mongo.db.recipe.find(), s=s, description=mongo.db.recipe.find())
+    return render_template("dish.html", recipe=mongo.db.recipe.find(), s=s, description=mongo.db.recipe.find(), image=mongo.db.recipe.find())
 
 
 def listOfingrediants():

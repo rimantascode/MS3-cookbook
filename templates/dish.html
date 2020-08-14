@@ -1,6 +1,9 @@
 {% extends 'base.html'%} {% block content %}
 <!-- The main picture area -->
-<div class="col s12 container picture-area"></div>
+<div class="col s12 container picture-area">
+  {% for images in image %}
+  <img class="responsive-img" src="{{images.picture_url}}" /> {%endfor%}
+</div>
 <!-- search results, those results will be the desplayd in this main page-->
 <div class="col s12 container search-results">
   <div class="col s12 search-result-bar">
