@@ -22,7 +22,17 @@ def get_tasks():
 
 @app.route('/dish')
 def dish():
-    return render_template("dish.html")
+    list = mongo.db.recipe.find()
+    for n in list:
+        s = n["ingrediants"].split(",")
+    return render_template("dish.html", recipe=mongo.db.recipe.find(), s=s, description=mongo.db.recipe.find())
+
+
+def listOfingrediants():
+    list = mongo.db.recipe.find()
+    for n in list:
+        s = n["ingrediants"].split(",")
+    return s
 
 
 if __name__ == '__main__':

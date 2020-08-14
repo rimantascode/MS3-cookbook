@@ -40,8 +40,24 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col m5">dsfds</div>
-    <div class="col m7">fsfsfdsdf sdfsdf</div>
+    <div class="col s12 m5 ingrediants-required">
+      <div class="ingrediants">
+        <h5>Ingrediants</h5>
+        {%for i in s %}
+        <ul>
+          <li class="order">{{i.capitalize()}}</li>
+        </ul>
+        {%endfor%}
+      </div>
+    </div>
+    <div class="col s12 m7 cooking-description">
+      {%for method in description%}
+      <div class="description">
+        <h5>Cooking Instruction</h5>
+        <p>{{method.cooking_instruction}}</p>
+      </div>
+      {%endfor%}
+    </div>
   </div>
 </div>
 {%endblock%}

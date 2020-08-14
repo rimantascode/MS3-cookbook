@@ -189,15 +189,44 @@ ul.share-links {
   padding-left: 10px;
 }
 /* ------------------------------------------------ dish.html----- */
-.recepie {
-
-}
 .ingrediants-required {
-  border: 2px solid green;
+  margin: 0;
+  padding: 0;
 }
 .cooking-description {
-  border: 2px solid red;
 }
+.ingrediants {
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: #f7f7f7;
+  padding-left: 0;
+  padding-right: 0px;
+}
+.ingrediants h5 {
+  text-align: center;
+}
+li.order {
+  list-style-type: none !important;
+  font-family: "Permanent Marker", sans-serif;
+  font-size: 15px;
+  text-transform: capitalize;
+  margin: 0 15px 0 15px;
+  border: 2px solid #ffffff;
+  border-radius: 13px;
+  text-align: center;
+}
+.description {
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: #f5f5dc;
+}
+.description h5 {
+  text-align: center;
+}
+.description p {
+  margin: 10px;
+}
+
 @media only screen and (max-width: 600px) {
   .card.horizontal .card-image {
     max-width: 100% !important;
