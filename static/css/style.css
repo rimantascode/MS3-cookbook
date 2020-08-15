@@ -233,6 +233,24 @@ li.order {
   margin: 10px;
 }
 
+/* ------------------------------------------------ add-recipe.html form----- */
+.txt-area {
+  height: 70px !important;
+}
+.txt-area:focus {
+  outline: none !important;
+  border-color: #008464 !important;
+  height: 100px !important;
+}
+select {
+  margin-left: 45px !important;
+  width: 88% !important;
+}
+
+.selects {
+  position: absolute;
+  left: 1.5rem;
+}
 @media only screen and (max-width: 600px) {
   .card.horizontal .card-image {
     max-width: 100% !important;

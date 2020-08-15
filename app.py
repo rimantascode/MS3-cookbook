@@ -28,11 +28,17 @@ def dish():
     return render_template("dish.html", recipe=mongo.db.recipe.find(), s=s, description=mongo.db.recipe.find(), image=mongo.db.recipe.find())
 
 
-def listOfingrediants():
-    list = mongo.db.recipe.find()
-    for n in list:
-        s = n["ingrediants"].split(",")
-    return s
+@app.route('/add_recipe')
+def add_recipe():
+    return render_template('add_recipe.html',
+                           categ=mongo.db.difficulty.find(), time=mongo.db.prep_time.find())
+
+
+@app.route('/insert_task', methods=['POST'])
+def insert_recipe():
+    tasks = mongo.db.recipe
+    tasks.insert_one(request.form.to_dict())
+    return redirect(url_for('get_tasks'))
 
 
 if __name__ == '__main__':

@@ -28,8 +28,9 @@
 	<div class="col s12 search-result-bar list-icon">
     <h5><i class="fas fa-th-list"></i> <span>Search results</span></h5>
     </div>
-	{%for ingrediants in recipe %}
+
 	<div class="search-results-list">
+		{%for ingrediants in recipe %}
 		<div class="card horizontal z-depth-4">
 			<div class="row">
 				<div class=" col m5 l5 card-image ">
@@ -50,7 +51,7 @@
 									<div class="short-info">
 										<div class="circles"><i class="material-icons">build</i></div>
 										<div class="data">
-											{{ingrediants.difficulty.capitalize()}}
+											{{ingrediants.difficulty_level.capitalize()}}
 										</div>
 									</div>
 								</div>
@@ -76,5 +77,5 @@
 		</div>
 	</div>
 
-	<!--<img src="{{ingrediants.picture_url}}" />-->{{ingrediants}}{%endfor%}{%endblock%}
-</div>
+{%endfor%}
+{%endblock%}
