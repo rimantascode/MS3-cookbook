@@ -47,8 +47,7 @@ font-family: "Roboto", sans-serif;
   background-color: #f5f5dc;
 }
 .search-results-list {
-  border: 1px solid black;
-  height: 400px;
+  max-height: 500px;
 }
 
 .image-container {
@@ -120,7 +119,10 @@ ul.a:not(.browser-default) > li {
   list-style-type: circle !important;
 }
 ul.a:not(.browser-default) {
-  padding: 20px !important;
+  padding: 2px 20px 4px 2px !important;
+}
+ul.a li {
+  line-height: 1px;
 }
 
 /* ------------------------------------------------ add button and share links ----- */
@@ -251,9 +253,18 @@ select {
   position: absolute;
   left: 1.5rem;
 }
+
 @media only screen and (max-width: 600px) {
   .card.horizontal .card-image {
     max-width: 100% !important;
+    max-height: 250px !important;
+    overflow: hidden;
+  }
+  .ca {
+    height: 800px !important;
+  }
+  .search-results-list {
+    max-height: 800px !important;
   }
   .round-image {
     border-top-right-radius: 30px !important;

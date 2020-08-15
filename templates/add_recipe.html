@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <h3>Add Recipe</h3>
 <div class="row">
-  <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
+  <form action="{{ url_for('insert_recipe')}}" method="POST" class="col s12">
     <div class="row">
       <div class="row">
         <div class="input-field col s12">
@@ -25,7 +25,7 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix selects">timer</i>
-          <select id="prep-time" name="prep-time" class="browser-default">
+          <select id="prep-time" name="prep_time" class="browser-default">
             <option value="" disabled selected>Preparation Time </option>
             {%for t in time %}
             <option value="{{t.time}}">{{t.time}}</option>
