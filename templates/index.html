@@ -1,3 +1,4 @@
+
 {% extends 'base.html'%} {% block content %}
 	{%for ingrediants in recipe %}
     <div class="ca">
@@ -28,20 +29,16 @@
 									</div>
 								</div>
 							</div>
-							<p>			
-							
+							<p>										
                                 <ul class="a">
-                            
-                              
-                                    <li> {{ingrediants.ingrediants}} </li>
-								
+                                    <li> {{ingrediants.ingrediants}} </li>					
                                 </ul>
                                 
 							</p>
-						</div>
-						<div class="card-action">
-							<a href="#">This is a link</a>
-						</div>
+						</div>					
+				<a href="{{url_for('edit_recipe',recipes_id=ingrediants._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+					<a href="{{url_for('dish',recipes_id=ingrediants._id)}}"
+						class="waves-effect waves-light btn btn_small blue">See Recipe</a>
 					</div>
 				</div>
 
@@ -53,4 +50,5 @@
         </div>
       
 {%endfor%}
+
 {%endblock%}
