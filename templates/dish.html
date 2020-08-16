@@ -1,15 +1,40 @@
-{% extends 'base.html'%} {% block content %}
+{% extends 'base.html'%} {% block dish %}
 <!-- The main picture area -->
 <div class="col s12 container picture-area">
-  {% for images in image %}
-  <img class="responsive-img" src="{{images.picture_url}}" /> {%endfor%}
+  {% for images in image %} {% if images.picture_url==recipes.picture_url%}
+  <img class="responsive-img" src="{{recipes.picture_url}}" />
+  {%endif%} {%endfor%}
 </div>
 <!-- search results, those results will be the desplayd in this main page-->
 <div class="col s12 container search-results">
   <div class="col s12 search-result-bar">
-    <a class="btn-floating btn-medium waves-effect waves-light red add-button"
-      ><i class="material-icons">add</i></a
-    >
+    <div class="fixed-action-btn btn-manage">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li>
+          <a
+            href="{{url_for('delete_recipe',recipes_id=recipes._id)}}"
+            class="btn-floating red"
+            ><i class="material-icons">delete_forever</i></a
+          >
+        </li>
+        <li>
+          <a
+            href="{{url_for('edit_recipe',recipes_id=recipes._id)}}"
+            class="btn-floating yellow darken-1"
+            ><i class="material-icons">mode_edit</i></a
+          >
+        </li>
+        <li>
+          <a href="{{url_for('add_recipe')}}" class="btn-floating green"
+            ><i class="material-icons">playlist_add</i></a
+          >
+        </li>
+      </ul>
+    </div>
+
     <div class="share">
       <div class="share-div">
         <h4>Share</h4>
@@ -45,7 +70,7 @@
     <div class="col s12 m5 ingrediants-required">
       <div class="ingrediants">
         <h5>Ingrediants</h5>
-        {%for i in s %}
+        {%for i in ingrediants %}
         <ul>
           <li class="order">{{i.capitalize()}}</li>
         </ul>
@@ -53,12 +78,10 @@
       </div>
     </div>
     <div class="col s12 m7 cooking-description">
-      {%for method in description%}
       <div class="description">
         <h5>Cooking Instruction</h5>
-        <p>{{method.cooking_instruction}}</p>
+        <p>{{recipes.cooking_description}}</p>
       </div>
-      {%endfor%}
     </div>
   </div>
 </div>

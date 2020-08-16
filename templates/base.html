@@ -61,6 +61,7 @@
       <li><a href="mobile.html">SEA FOOD</a></li>
       <li><a href="mobile.html">SALAD</a></li>
     </ul>
+    {% block dish %}
     <!-- The main picture area -->
     <div class="col s12 container picture-area"></div>
     <!-- search results, those results will be the desplayd in this main page-->
@@ -104,14 +105,19 @@
 
       {% block content %} {% endblock %}
     </div>
-
+    {% endblock %}
     <script>
       $(document).ready(function () {
         $(".sidenav").sidenav();
         $(".dropdown-trigger").dropdown();
         $("select").formSelect();
-        $("select").formSelect("difficulty_level");
-        $("textarea#ingrediants").characterCounter();
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll(".fixed-action-btn");
+        var instances = M.FloatingActionButton.init(elems, {
+          direction: "up",
+          hoverEnabled: false,
+        });
       });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

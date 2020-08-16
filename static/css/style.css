@@ -45,6 +45,7 @@ font-family: "Roboto", sans-serif;
   border: 1px solid brown;
   height: 56px;
   background-color: #f5f5dc;
+  position: relative;
 }
 .search-results-list {
   max-height: 500px;
@@ -200,9 +201,6 @@ ul.share-links {
   margin: 0;
   padding: 0;
 }
-.cooking-description {
-}
-
 .ingrediants {
   border: 1px solid black;
   border-radius: 15px;
