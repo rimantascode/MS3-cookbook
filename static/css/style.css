@@ -67,12 +67,11 @@ font-family: "Roboto", sans-serif;
   border-bottom-left-radius: 30px !important;
 }
 .info-window {
-  border: 1px solid brown;
 }
 .short-info {
   height: 60px;
   width: 110px;
-  border: 1px solid green;
+
   display: inline-block;
   position: relative;
   margin: 0 auto;
@@ -113,7 +112,7 @@ font-family: "Roboto", sans-serif;
   width: 224px;
 }
 ul.a {
-  display: inline-block;
+  /*display: inline-block; */
 }
 
 ul.a:not(.browser-default) > li {
@@ -123,7 +122,7 @@ ul.a:not(.browser-default) {
   padding: 2px 20px 4px 2px !important;
 }
 ul.a li {
-  line-height: 1px;
+  line-height: 15px;
 }
 
 /* ------------------------------------------------ add button and share links ----- */
