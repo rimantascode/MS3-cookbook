@@ -1,113 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/fa14b2a9bf.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="{{url_for('static', filename='css/style.css')}}"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Document</title>
-  </head>
 
-  <body>
-    <!--This NAVBAR is for the bigger screens-->
-    <nav>
-      <div class="nav-wrapper my-nav">
-        <a href="#!" class="brand-logo">Logo</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-          ><i class="material-icons">menu</i></a
-        >
-        <ul class="centered hide-on-med-and-down">
-          <li class="nav-links dropdown-trigger">
-            <a href="#">POULTRY</a>
-          </li>
-          <li class="nav-links">
-            <a class="dropdown-trigger" href="#!">RED MEAT</a>
-          </li>
-          <li class="nav-links"><a href="#">PORK</a></li>
-          <li class="nav-links"><a href="#">SEA FOOD</a></li>
-          <li class="nav-links"><a href="#">SALAD</a></li>
-        </ul>
-      </div>
-    </nav>
-    <!--This peace navbar peace is for smaller secreens -->
-    <ul class="sidenav" id="mobile-demo">
-      <li>
-        <a class="dropdown-trigger" href="#!" data-target="dropdown2"
-          >POULTRY<i class="material-icons right">arrow_drop_down</i></a
-        >
-      </li>
-      <li>
-        <a class="dropdown-trigger" href="#!" data-target="dropdown3"
-          >RED MEAT<i class="material-icons right">arrow_drop_down</i></a
-        >
-      </li>
-      <li><a href="collapsible.html">PORK</a></li>
-      <li><a href="mobile.html">SEA FOOD</a></li>
-      <li><a href="mobile.html">SALAD</a></li>
-    </ul>
-    {% block dish %}
-    <!-- The main picture area -->
-    <div class="col s12 container picture-area"></div>
-    <!-- search results, those results will be the desplayd in this main page-->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://kit.fontawesome.com/fa14b2a9bf.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>Document</title>
+</head>
 
-    <div class="col s12 container search-results">
-      <div class="col s12 search-result-bar">
-        <a
-          href="{{url_for('add_recipe')}}"
-          class="btn-floating btn-medium waves-effect waves-light red add-button"
-          ><i class="material-icons">add</i></a
-        >
-        <div class="share">
-          <div class="share-div">
-            <h4>Share</h4>
-          </div>
-          <div class="share-links-container">
-            <ul class="share-links">
-              <div class="circle-around-social-links">
-                <li>
-                  <a href="#"><i class="fab fa-facebook"></i></a>
-                </li>
-              </div>
-              <div class="circle-around-social-links">
-                <li>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                </li>
-              </div>
-              <div class="circle-around-social-links">
-                <li>
-                  <a href="#"><i class="fab fa-instagram-square"></i></a>
-                </li>
-              </div>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- search results -->
-      <div class="col s12 search-result-bar list-icon">
-        <h5><i class="fas fa-th-list"></i> <span>Search results</span></h5>
-      </div>
-
-      {% block content %} {% endblock %}
+<body>
+	<!--This NAVBAR is for the bigger screens-->
+	<nav>
+		<div class="nav-wrapper my-nav">
+			<a href="#!" class="brand-logo">Logo</a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<ul class="centered hide-on-med-and-down">
+				<li class="nav-links dropdown-trigger">
+					<a href="#">POULTRY</a>
+				</li>
+				<li class="nav-links">
+					<a class="dropdown-trigger" href="#!">RED MEAT</a>
+				</li>
+				<li class="nav-links"><a href="#">PORK</a></li>
+				<li class="nav-links"><a href="#">SEA FOOD</a></li>
+				<li class="nav-links"><a href="#">SALAD</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!--This peace navbar peace is for smaller secreens -->
+	<ul class="sidenav" id="mobile-demo">
+		<li>
+			<a class="dropdown-trigger" href="#!"
+				data-target="dropdown2">POULTRY<i class="material-icons right">arrow_drop_down</i></a>
+		</li>
+		<li>
+			<a class="dropdown-trigger" href="#!" data-target="dropdown3">RED
+				MEAT<i class="material-icons right">arrow_drop_down</i></a>
+		</li>
+		<li><a href="collapsible.html">PORK</a></li>
+		<li><a href="mobile.html">SEA FOOD</a></li>
+		<li><a href="mobile.html">SALAD</a></li>
+	</ul>
+	{% block dish %}
+	<!-- The main picture area -->
+	<div class="col s12 container picture-area">
+		<img class="responsive-img" src="{{url_for('static',filename='images/102679650_cd10235c8f_k.jpg')}}">
     </div>
-    {% endblock %}
-    <script>
-      $(document).ready(function () {
+		<!-- search results, those results will be the desplayd in this main page-->
+
+		<div class="col s12 container search-results">
+			<div class="col s12 search-result-bar">
+				<a href="{{url_for('add_recipe')}}"
+					class="btn-floating btn-medium waves-effect waves-light red add-button"><i class="material-icons">add</i></a>
+				<div class="share">
+					<div class="share-div">
+						<h4>Share</h4>
+					</div>
+					<div class="share-links-container">
+						<ul class="share-links">
+							<div class="circle-around-social-links">
+								<li>
+									<a href="#"><i class="fab fa-facebook"></i></a>
+								</li>
+							</div>
+							<div class="circle-around-social-links">
+								<li>
+									<a href="#"><i class="fab fa-twitter"></i></a>
+								</li>
+							</div>
+							<div class="circle-around-social-links">
+								<li>
+									<a href="#"><i class="fab fa-instagram-square"></i></a>
+								</li>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- search results -->
+			<div class="col s12 search-result-bar list-icon">
+				<h5><i class="fas fa-th-list"></i> <span>Search results</span></h5>
+			</div>
+
+			{% block content %} {% endblock %}
+		</div>
+		{% endblock %}
+		<script>
+			$(document).ready(function () {
         $(".sidenav").sidenav();
         $(".dropdown-trigger").dropdown();
         $("select").formSelect();
@@ -119,7 +102,8 @@
           hoverEnabled: false,
         });
       });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </body>
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
 </html>

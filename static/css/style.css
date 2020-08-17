@@ -64,7 +64,8 @@ font-family: "Roboto", sans-serif;
 }
 .round-image {
   border-top-left-radius: 30px !important;
-  border-bottom-left-radius: 30px !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 100px !important;
 }
 .info-window {
 }
