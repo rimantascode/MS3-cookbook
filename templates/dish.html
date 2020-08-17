@@ -70,11 +70,12 @@
     <div class="col s12 m5 ingrediants-required">
       <div class="ingrediants">
         <h5>Ingrediants</h5>
-        {%for i in ingrediants %}
+
         <ul>
-          <li class="order">{{i.capitalize()}}</li>
+          {%for i in a%}
+          <li class="order">{{i}}</li>
+          {%endfor%}
         </ul>
-        {%endfor%}
       </div>
     </div>
     <div class="col s12 m7 cooking-description">

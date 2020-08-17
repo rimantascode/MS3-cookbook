@@ -30,12 +30,10 @@ def edit_recipe(recipes_id):
 @app.route('/dish/<recipes_id>')
 def dish(recipes_id):
     the_recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipes_id)})
-    list = mongo.db.recipe.find()
     all_categories = mongo.db.categories.find()
-    for s in list:
-        v = s["ingrediants"].split(",")
-    return render_template('dish.html', recipes=the_recipe,
-                           categories=all_categories,  image=mongo.db.recipe.find(), ingrediants=v)
+    a = the_recipe["ingrediants"].split(",")
+    return render_template('dish.html', recipes=the_recipe, a=a,
+                           categories=all_categories,  image=mongo.db.recipe.find())
 
 
 @ app.route('/add_recipe')
