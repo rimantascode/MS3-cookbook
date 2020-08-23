@@ -261,6 +261,37 @@ select {
   left: 1.5rem;
 }
 
+/* ------------------------------------------------ Footer----- */
+.the-footer {
+  background-color: #964600 !important;
+}
+.social-footer-links i {
+  letter-spacing: 25px;
+  font-size: 24px;
+  padding-top: 4px;
+  padding-left: 5px;
+  color: #edebeb;
+}
+.circle-around-social-links-footer {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #964600;
+  border: 2px solid #ffffff;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+.footer-links {
+  padding-bottom: 8px;
+}
+.footer-links a {
+  font-size: 16px !important;
+}
+/* ------------------------------------------------ about_us.html----- */
+.about_us {
+  text-align: center;
+}
 @media only screen and (max-width: 600px) {
   .card.horizontal .card-image {
     max-width: 100% !important;
