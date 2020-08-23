@@ -1,10 +1,11 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, flash, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
 
 app = Flask(__name__)
+app.secret_key = "flashingmessages"
 app.config["MONGO_DBNAME"] = 'cook_book'
 app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
@@ -73,6 +74,24 @@ def delete_recipe(recipes_id):
 @app.route('/about_us')
 def about_us():
     return render_template('about_us.html')
+
+
+@app.route('/contact_us')
+def contact_us():
+    return render_template("contact_us.html")
+
+
+@app.route("/contact_us_form", methods=['GET', 'POST'])
+def contact_us_form():
+    error = None
+    if request.method == 'POST':
+        if request.form['first_name'] == "":
+            error = 'You must provide your name'
+        else:
+            flash('{} Success! Thank you for contancting us'.format(
+                request.form['first_name']))
+            return redirect(url_for("contact_us"))
+    return render_template("contact_us.html", error=error)
 
 
 if __name__ == '__main__':

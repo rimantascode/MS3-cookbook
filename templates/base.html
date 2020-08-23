@@ -124,10 +124,18 @@
             <h5 class="white-text">Explore</h5>
             <ul>
               <li class="footer-links">
-                <a class="grey-text text-lighten-3" href="#!">About Us</a>
+                <a
+                  class="grey-text text-lighten-3"
+                  href="{{ url_for('about_us')}}"
+                  >About Us</a
+                >
               </li>
               <li class="footer-links">
-                <a class="grey-text text-lighten-3" href="#!">Contact Us</a>
+                <a
+                  class="grey-text text-lighten-3"
+                  href="{{ url_for('contact_us')}}"
+                  >Contact Us</a
+                >
               </li>
               <div class="circle-around-social-links-footer">
                 <li class="social-footer-links">
@@ -170,6 +178,7 @@
         $(".sidenav").sidenav();
         $(".dropdown-trigger").dropdown();
         $("select").formSelect();
+        $("textarea#message").characterCounter();
       });
       document.addEventListener("DOMContentLoaded", function () {
         var elems = document.querySelectorAll(".fixed-action-btn");
