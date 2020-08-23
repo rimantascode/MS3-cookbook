@@ -14,10 +14,21 @@
             <option value="" disabled selected
               >Select The Difficulty Level</option
             >
-            {%for cat in categ %}
-            <option value="{{cat.difficulty_level}}"
-              >{{cat.difficulty_level.capitalize()}}</option
+            {%for level in levels %}
+            <option value="{{level.difficulty_level}}"
+              >{{level.difficulty_level.capitalize()}}</option
             >
+            {%endfor%}
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix selects">build</i>
+          <select id="category" name="category" class="browser-default">
+            <option value="" disabled selected>Select category</option>
+            {%for cat in categoriess %}
+            <option value="{{cat.name}}">{{cat.name}}</option>
             {%endfor%}
           </select>
         </div>

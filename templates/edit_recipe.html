@@ -46,6 +46,21 @@
           </select>
         </div>
       </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix selects">build</i>
+          <select id="category" name="category" class="browser-default">
+            <option value="" disabled selected>Select category</option>
+            {%for cat in categoriess %}{%if cat.name==recipes.category%}
+            <option value="{{recipes.category}}" selected
+              >{{recipes.category}}</option
+            >
+            {%else%}
+            <option value="{{cat.name}}">{{cat.name}}</option>
+            {%endif%} {%endfor%}
+          </select>
+        </div>
+      </div>
       <div class="input-field col s12">
         <i class="material-icons prefix">assignment</i>
         <input

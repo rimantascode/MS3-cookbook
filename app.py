@@ -25,7 +25,7 @@ def edit_recipe(recipes_id):
     all_difficulties = mongo.db.difficulty.find()
     cooking_time = mongo.db.prep_time.find()
     return render_template('edit_recipe.html', recipes=the_recipe,
-                           difficulties=all_difficulties, time=cooking_time)
+                           difficulties=all_difficulties, time=cooking_time, categoriess=mongo.db.categories.find())
 
 
 @app.route('/dish/<recipes_id>')
@@ -40,7 +40,8 @@ def dish(recipes_id):
 @ app.route('/add_recipe')
 def add_recipe():
     return render_template('add_recipe.html',
-                           categ=mongo.db.difficulty.find(), time=mongo.db.prep_time.find())
+                           levels=mongo.db.difficulty.find(), time=mongo.db.prep_time.find(),
+                           categoriess=mongo.db.categories.find())
 
 
 @ app.route('/insert_task', methods=['POST'])
