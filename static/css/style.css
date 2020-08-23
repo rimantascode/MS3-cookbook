@@ -59,16 +59,19 @@ font-family: "Roboto", sans-serif;
 }
 
 /* ------------------------------------------------ serch reults by cards ----- */
+.ca > .row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 .card.horizontal {
   border-radius: 30px;
 }
 .round-image {
   border-top-left-radius: 30px !important;
   border-bottom-left-radius: 0px !important;
-  border-bottom-right-radius: 100px !important;
+  border-bottom-right-radius: 30px !important;
 }
-.info-window {
-}
+
 .short-info {
   height: 60px;
   width: 110px;
@@ -82,7 +85,6 @@ font-family: "Roboto", sans-serif;
   height: 40px;
   width: 40px;
   background-color: #ff9900;
-
   float: left;
   border-radius: 50%;
   text-align: center;
@@ -112,18 +114,25 @@ font-family: "Roboto", sans-serif;
   position: relative;
   width: 224px;
 }
-ul.a {
-  /*display: inline-block; */
-}
 
 ul.a:not(.browser-default) > li {
-  list-style-type: circle !important;
+  text-align: justify;
+  align-content: center;
 }
 ul.a:not(.browser-default) {
   padding: 2px 20px 4px 2px !important;
 }
 ul.a li {
   line-height: 15px;
+}
+.size {
+  height: 450px !important;
+  object-fit: cover;
+}
+.btn,
+.btn-large,
+.btn-small {
+  margin-bottom: 10px !important;
 }
 
 /* ------------------------------------------------ add button and share links ----- */
@@ -256,10 +265,10 @@ select {
   .card.horizontal .card-image {
     max-width: 100% !important;
     max-height: 250px !important;
-    overflow: hidden;
+    object-fit: cover;
   }
   .ca {
-    height: 800px !important;
+    /* height: 800px !important;*/
   }
   .search-results-list {
     max-height: 800px !important;
@@ -267,5 +276,10 @@ select {
   .round-image {
     border-top-right-radius: 30px !important;
     border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+  .size {
+    width: 100% !important;
+    height: 250px !important;
   }
 }
