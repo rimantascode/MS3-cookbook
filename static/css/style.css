@@ -197,10 +197,14 @@ ul.share-links {
   margin: 0;
   line-height: 56px;
   text-align: center;
+  font-size: 18px;
 }
 .list-icon h5 span {
-  font-family: "Permanent Marker", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   padding-left: 10px;
+  text-transform: capitalize;
+  font-weight: 800;
+  color: #ff9900;
 }
 /* ------------------------------------------------ dish.html----- */
 .recipe-details {
@@ -222,7 +226,7 @@ ul.share-links {
 }
 li.order {
   list-style-type: none !important;
-  font-family: "Permanent Marker", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 15px;
   text-transform: capitalize;
   margin: 0 15px 0 15px;
