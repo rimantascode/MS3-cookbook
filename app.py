@@ -5,7 +5,7 @@ from bson.objectid import ObjectId
 
 
 app = Flask(__name__)
-app.secret_key = "flashingmessages"
+app.config["SECRET_KEY"] = os.environ.get('SECRET_KEY', 'dev')
 app.config["MONGO_DBNAME"] = 'cook_book'
 app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
@@ -95,7 +95,7 @@ def contact_us_form():
         if request.form['first_name'] == "":
             error = 'You must provide your name'
         else:
-            flash('{}, Success! Thank you for contancting us.'.format(
+            flash('{}, Success! Thank you for contacting us.'.format(
                 request.form['first_name']))
             return redirect(url_for("contact_us"))
     return render_template("contact_us.html", error=error)

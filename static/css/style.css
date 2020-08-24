@@ -3,6 +3,14 @@
 font-family: "Permanent Marker", cursive;
 font-family: "Roboto", sans-serif;
 */
+/*
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+*/
+
 /* ------------------------------------------------ NAV BAR ----- */
 .my-nav {
   background-color: #964600;
@@ -309,6 +317,7 @@ select {
   color: #f7f7f7;
   background-color: #ec373780;
 }
+
 @media only screen and (max-width: 600px) {
   .card.horizontal .card-image {
     max-width: 100% !important;
@@ -330,4 +339,6 @@ select {
     width: 100% !important;
     height: 250px !important;
   }
+}
+@media only screen and (max-width: 1200px) {
 }

@@ -1,55 +1,53 @@
 {%extends 'base.html'%}{%block content%}
 <h2 class="center-heading">Contact Us</h2>
 <ul class="error">
-  <li>{{error}}</li>
-  </ul>
-    {% with messages = get_flashed_messages() %} {% if messages %}
-    <ul class="flashes">
-      {% for message in messages %}
-      <li>{{ message }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %} {% endwith %} {% block body %}{% endblock %}
-    <form
-      action="{{ url_for('contact_us_form')}}"
-      method="POST"
-      class="col s12"
-    >
-      <div class="row">
-        <div class="row">
-          <div class="input-field col s6">
-            <input
+	<li>{{error}}</li>
+</ul>
+{% with messages = get_flashed_messages() %} {% if messages %}
+<ul class="flashes">
+	{% for message in messages %}
+	<li>{{ message }}</li>
+	{% endfor %}
+</ul>
+{% endif %} {% endwith %} {% block body %}{% endblock %}
+<form action="{{ url_for('contact_us_form')}}" method="POST" class="col s12">
+	<div class="row">
+		<div class="row">
+			<div class="input-field col s6">
+				<input
               placeholder="Placeholder"
               type="text"
               class="validate"
               name="first_name"
+              required
             />
-            <label for="first_name">First Name</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="last_name" type="text" class="validate" />
-            <label for="last_name">Last Name</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate" />
-            <label for="email">Email</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <textarea
+				<label for="first_name">First Name</label>
+			</div>
+			<div class="input-field col s6">
+				<input id="last_name" type="text" class="validate"  required />
+				<label for="last_name">Last Name</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<input id="email" type="email" class="validate" required />
+				<label for="email">Email</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<textarea
               id="message"
               class="materialize-textarea"
               data-length="120"
+              required
             ></textarea>
-            <label for="message">Textarea</label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <button
+				<label for="message">Textarea</label>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<button
           class="btn waves-effect waves-light"
           type="submit"
           name="action"
@@ -57,8 +55,6 @@
           Submit
 		<i class="material-icons right">send</i>
         </button>
-      </div>
-    </form>
-    {% endblock %}
-
-
+	</div>
+</form>
+{% endblock %}
