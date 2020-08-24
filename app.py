@@ -2,6 +2,7 @@ import os
 from flask import Flask, flash, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from flask_share import Share
 
 
 app = Flask(__name__)
@@ -9,7 +10,10 @@ app.config["SECRET_KEY"] = os.environ.get('SECRET_KEY', 'dev')
 app.config["MONGO_DBNAME"] = 'cook_book'
 app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
+
 mongo = PyMongo(app)
+share = Share()
+share.init_app(app)
 
 
 @app.route('/')
@@ -67,7 +71,8 @@ def update_recipe(recipes_id):
         'prep_time': request.form.get('prep_time'),
         'cooking_description': request.form.get('cooking_description'),
         'picture_url': request.form.get('picture_url'),
-        "ingrediants": request.form.get('ingrediants')
+        "ingrediants": request.form.get('ingrediants'),
+         "category": request.form.get('category'),
     })
     return redirect(url_for('get_tasks'))
 
