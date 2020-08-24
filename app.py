@@ -19,7 +19,13 @@ def get_tasks():
                            recipe=mongo.db.recipe.find())
 
 
-@app.route('/edit_recipe/<recipes_id>')
+@app.route('/index/<category>')
+def get_categories(category):
+    return render_template("index.html",
+                           recipe=mongo.db.recipe.find({"category": category}))
+
+
+@ app.route('/edit_recipe/<recipes_id>')
 def edit_recipe(recipes_id):
     the_recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipes_id)})
     all_difficulties = mongo.db.difficulty.find()
@@ -28,7 +34,7 @@ def edit_recipe(recipes_id):
                            difficulties=all_difficulties, time=cooking_time, categoriess=mongo.db.categories.find())
 
 
-@app.route('/dish/<recipes_id>')
+@ app.route('/dish/<recipes_id>')
 def dish(recipes_id):
     the_recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipes_id)})
     all_categories = mongo.db.categories.find()
@@ -66,30 +72,30 @@ def update_recipe(recipes_id):
     return redirect(url_for('get_tasks'))
 
 
-@app.route('/delete_recipe/<recipes_id>')
+@ app.route('/delete_recipe/<recipes_id>')
 def delete_recipe(recipes_id):
     mongo.db.recipe.remove({'_id': ObjectId(recipes_id)})
     return redirect(url_for('get_tasks'))
 
 
-@app.route('/about_us')
+@ app.route('/about_us')
 def about_us():
     return render_template('about_us.html')
 
 
-@app.route('/contact_us')
+@ app.route('/contact_us')
 def contact_us():
     return render_template("contact_us.html")
 
 
-@app.route("/contact_us_form", methods=['GET', 'POST'])
+@ app.route("/contact_us_form", methods=['GET', 'POST'])
 def contact_us_form():
     error = None
     if request.method == 'POST':
         if request.form['first_name'] == "":
             error = 'You must provide your name'
         else:
-            flash('{} Success! Thank you for contancting us'.format(
+            flash('{}, Success! Thank you for contancting us.'.format(
                 request.form['first_name']))
             return redirect(url_for("contact_us"))
     return render_template("contact_us.html", error=error)
