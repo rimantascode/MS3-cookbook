@@ -31,14 +31,16 @@
 							</div>
 							<p>										
                                 <ul class="a">
-                                    <li> {{ingrediants.ingrediants}} </li>					
-                                </ul>
-                                
+                                    <li> {{ingrediants.ingrediants}} </li>		
+                                </ul>                               
 							</p>
-						</div>					
-				<a href="{{url_for('edit_recipe',recipes_id=ingrediants._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+						</div>		
+						<a href="{{url_for('delete_recipe',recipes_id=ingrediants._id)}}"
+							class="waves-effect waves-light btn btn_small blue xx">DELETE</a>
+				<a href="{{url_for('edit_recipe',recipes_id=ingrediants._id)}}" class="waves-effect waves-light btn btn_small blue xx" >Edit</a>
 					<a href="{{url_for('dish',recipes_id=ingrediants._id)}}"
 						class="waves-effect waves-light btn btn_small blue">See Recipe</a>
+                        
 					</div>
 				</div>
 

@@ -1,145 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/fa14b2a9bf.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    {{ share.load() }}
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<script src="https://kit.fontawesome.com/fa14b2a9bf.js" crossorigin="anonymous"></script>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<title>Document</title>
-	{{ share.load() }}
-</head>
+  <body>
+    <!--This NAVBAR is for the bigger screens-->
+    <nav>
+      <div class="nav-wrapper my-nav">
+        <a href="/index" class="brand-logo"
+          ><i class="material-icons prefix selects">home</i></a
+        >
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="centered hide-on-med-and-down">
+          <li class="nav-links dropdown-trigger">
+            <a href="/index/Poultry">POULTRY</a>
+          </li>
+          <li class="nav-links">
+            <a class="dropdown-trigger" href="/index/Red Meat">RED MEAT</a>
+          </li>
+          <li class="nav-links"><a href="/index/Pork">PORK</a></li>
+          <li class="nav-links"><a href="/index/Sea Food">SEA FOOD</a></li>
+          <li class="nav-links"><a href="/index/Salad">SALAD</a></li>
+        </ul>
+      </div>
 
-<body>
-	<!--This NAVBAR is for the bigger screens-->
-	<nav>
-		<div class="nav-wrapper my-nav">
-			<a href="/index" class="brand-logo"><i class="material-icons prefix selects">home</i></a>
-			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-			<ul class="centered hide-on-med-and-down">
-				<li class="nav-links dropdown-trigger">
-					<a href="/index/Poultry">POULTRY</a>
-				</li>
-				<li class="nav-links">
-					<a class="dropdown-trigger" href="/index/Red Meat">RED MEAT</a>
-				</li>
-				<li class="nav-links"><a href="/index/Pork">PORK</a></li>
-				<li class="nav-links"><a href="/index/Sea Food">SEA FOOD</a></li>
-				<li class="nav-links"><a href="/index/Salad">SALAD</a></li>
-			</ul>
-		</div>
-	</nav>
-	<!--This peace navbar peace is for smaller secreens -->
-	<ul class="sidenav" id="mobile-demo">
-		<li>
-			<a class="dropdown-trigger" href="/index/Poultry" data-target="dropdown2">POULTRY</a>
-		</li>
-		<li>
-			<a class="dropdown-trigger" href="/index/Red Meat" data-target="dropdown3">RED MEAT</a>
-		</li>
-		<li><a href="/index/Pork">PORK</a></li>
-		<li><a href="/index/Sea Food">SEA FOOD</a></li>
-		<li><a href="/index/Salad">SALAD</a></li>
-	</ul>
-	{% block dish %}
-	<!-- The main picture area -->
-	<div class="col s12 container picture-area">
-		<img
+      <!--This peace navbar peace is for smaller secreens -->
+      <ul class="sidenav" id="mobile-demo">
+        <li>
+          <a
+            class="dropdown-trigger"
+            href="/index/Poultry"
+            data-target="dropdown2"
+            >POULTRY</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-trigger"
+            href="/index/Red Meat"
+            data-target="dropdown3"
+            >RED MEAT</a
+          >
+        </li>
+        <li><a href="/index/Pork">PORK</a></li>
+        <li><a href="/index/Sea Food">SEA FOOD</a></li>
+        <li><a href="/index/Salad">SALAD</a></li>
+      </ul>
+    </nav>
+    {% block dish %}
+    <!-- The main picture area -->
+    <div class="col s12 container picture-area">
+      <img
         class="responsive-img"
         src="{{url_for('static',filename='images/102679650_cd10235c8f_k.jpg')}}"
       />
     </div>
-		<!-- search results, those results will be the desplayd in this main page-->
+    <!-- search results, those results will be the desplayd in this main page-->
 
-		<div class="col s12 container search-results">
-			<div class="col s12 search-result-bar">
-				<a href="{{url_for('add_recipe')}}"
-					class="btn-floating btn-medium waves-effect waves-light red add-button"><i class="material-icons">add</i></a>
-				<div class="share">
-					<div class="share-div">
-						<h4>Share</h4>
-					</div>
-					<div class="share-links-container">
-						<ul class="share-links">
-							<div class="circle-around-social-links">
-								<li>
-									<a href="#"><i class="fab fa-facebook"></i></a>
-								</li>
-							</div>
-							<div class="circle-around-social-links">
-								<li>
-									<a href="#"><i class="fab fa-twitter"></i></a>
-								</li>
-							</div>
-							<div class="circle-around-social-links">
-								<li>
-									<a href="#"><i class="fab fa-instagram-square"></i></a>
-								</li>
-							</div>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- search results -->
-			<div class="col s12 search-result-bar list-icon">
-				<h5><i class="fas fa-th-list"></i> <span>Search results</span></h5>
-			</div>
+    <div class="col s12 container search-results">
+      <div class="col s12 search-result-bar">
+        <a
+          href="{{url_for('add_recipe')}}"
+          class="btn-floating btn-medium waves-effect waves-light red add-button"
+          ><i class="material-icons">add</i></a
+        >
+        <div class="share">
+          <div class="share-div">
+            <h4>Share</h4>
+          </div>
+          <div class="share-links-container">
+            <ul class="share-links">
+              <div class="circle-around-social-links">
+                <li>
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                </li>
+              </div>
+              <div class="circle-around-social-links">
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+              </div>
+              <div class="circle-around-social-links">
+                <li>
+                  <a href="#"><i class="fab fa-instagram-square"></i></a>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-			{% block content %} {% endblock %}
-		</div>
-		{% endblock %}
-		<footer class="page-footer the-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col l6 s12">
-						<h5 class="white-text"></h5>
-						<p class="grey-text text-lighten-4">
-							You can use rows and columns here to organize your footer content.
-						</p>
-					</div>
-					<div class="col l4 offset-l2 s12">
-						<h5 class="white-text">Explore</h5>
-						<ul>
-							<li class="footer-links">
-								<a class="grey-text text-lighten-3" href="{{ url_for('about_us')}}">About Us</a>
-							</li>
-							<li class="footer-links">
-								<a class="grey-text text-lighten-3" href="{{ url_for('contact_us')}}">Contact Us</a>
-							</li>
-							<div class="circle-around-social-links-footer">
-								<li class="social-footer-links">
-									<a class="grey-text text-lighten-3" href="https://www.facebook.com"
-										target="_blank"><i class="fab fa-facebook"></i></a>
-								</li>
-							</div>
-							<div class="circle-around-social-links-footer">
-								<li class="social-footer-links">
-									<a class="grey-text text-lighten-3" href="https://www.instagram.com/"
-										target="_blank"><i class="fab fa-instagram-square"></i></a>
-								</li>
-							</div>
-							<div class="circle-around-social-links-footer">
-								<li class="social-footer-links">
-									<a class="grey-text text-lighten-3" href="https://twitter.com/?lang=en-gb"
-										target="_blank"><i class="fab fa-twitter"></i></a>
-								</li>
-							</div>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="footer-copyright">
-				<div class="container">
-					© 2020 Copyrights reserved
-				</div>
-			</div>
-		</footer>
+      <!-- search results -->
+      <div class="col s12 search-result-bar list-icon">
+        <h5><i class="fas fa-th-list"></i> <span>ALL RECIPES</span></h5>
+      </div>
 
-		<script>
-			$(document).ready(function () {
+      {% block content %} {% endblock %}
+    </div>
+    {% endblock %}
+    <footer class="page-footer the-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text"></h5>
+            <p class="grey-text text-lighten-4">
+              You can use rows and columns here to organize your footer content.
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Explore</h5>
+            <ul>
+              <li class="footer-links">
+                <a
+                  class="grey-text text-lighten-3"
+                  href="{{ url_for('about_us')}}"
+                  >About Us</a
+                >
+              </li>
+              <li class="footer-links">
+                <a
+                  class="grey-text text-lighten-3"
+                  href="{{ url_for('contact_us')}}"
+                  >Contact Us</a
+                >
+              </li>
+              <div class="circle-around-social-links-footer">
+                <li class="social-footer-links">
+                  <a
+                    class="grey-text text-lighten-3"
+                    href="https://www.facebook.com"
+                    target="_blank"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                </li>
+              </div>
+              <div class="circle-around-social-links-footer">
+                <li class="social-footer-links">
+                  <a
+                    class="grey-text text-lighten-3"
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    ><i class="fab fa-instagram-square"></i
+                  ></a>
+                </li>
+              </div>
+              <div class="circle-around-social-links-footer">
+                <li class="social-footer-links">
+                  <a
+                    class="grey-text text-lighten-3"
+                    href="https://twitter.com/?lang=en-gb"
+                    target="_blank"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2020 Copyrights reserved
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
         $(".sidenav").sidenav();
         $(".dropdown-trigger").dropdown();
         $("select").formSelect();
@@ -152,8 +203,7 @@
           hoverEnabled: false,
         });
       });
-		</script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
-
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
 </html>

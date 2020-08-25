@@ -12,6 +12,10 @@ footer {
 */
 
 /* ------------------------------------------------ NAV BAR ----- */
+nav {
+  position: fixed;
+  z-index: 1;
+}
 .my-nav {
   background-color: #964600;
   text-align: center;
@@ -50,11 +54,19 @@ footer {
 .search-results {
 }
 .search-result-bar {
-  border: 1px solid brown;
+  border-bottom: 1px solid #666666;
   height: 56px;
   background-color: #f5f5dc;
   position: relative;
 }
+.search-result-bar-dish {
+  border-bottom: 1px solid #666666;
+  height: 56px;
+  background-color: #f7f7f7;
+  position: relative;
+  margin-bottom: 10px;
+}
+
 .search-results-list {
   max-height: 500px;
 }
@@ -66,7 +78,7 @@ footer {
   margin-top: 12px;
 }
 
-/* ------------------------------------------------ serch reults by cards ----- */
+/* ------------------------------------------------ search reults by cards ----- */
 .ca > .row {
   margin: 0 !important;
   padding: 0 !important;
@@ -196,6 +208,10 @@ ul.share-links {
   padding-left: 5px;
   color: #edebeb;
 }
+.card-stacked a {
+  z-index: 0;
+}
+
 /* ------------------------------------------------ list icon----- */
 .list-icon {
   background-color: #f7f7f7;
@@ -205,14 +221,20 @@ ul.share-links {
   margin: 0;
   line-height: 56px;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.2rem;
+}
+.list-icon-dish h5 {
+  margin: 0;
+  /*line-height:56px;*/
+  text-align: center;
+  font-size: 1.2rem;
 }
 .list-icon h5 span {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Permanent Marker", cursive;
   padding-left: 10px;
   text-transform: capitalize;
   font-weight: 800;
-  color: #ff9900;
+  color: #666666;
 }
 /* ------------------------------------------------ dish.html----- */
 .recipe-details {
