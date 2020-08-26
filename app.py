@@ -21,35 +21,17 @@ share.init_app(app)
 @app.route('/')
 @app.route('/index')
 def get_tasks():
-    lists = []
-    list2 = []
-    dicts = {}
-    a = mongo.db.recipe.find().sort("date", -1)
-    for z in a:
-        j = z["date"]
-        x = datetime.today()
-        l = datetime.strptime(j, '%Y-%m-%d %H:%M:%S.%f')
-        v = x-l
-        i = v.total_seconds()
-        o = str(humanize.naturaltime(i))
-        if i < 86400:
-            lists.append([o, "new"])
-            list2.append(j)
-        else:
-            lists.append(o)
-            list2.append(j)
-        keys = range(0, len(lists))
-    for b in keys:
-        dicts[list2[b]] = [lists[b]]
+    time_added()
 
     return render_template("index.html",
-                           recipe=mongo.db.recipe.find().sort("date", -1), added_latest=dicts)
+                           recipe=mongo.db.recipe.find().sort("date", -1), added_latest=time_added())
 
 
 @ app.route('/index/<category>')
 def get_categories(category):
+    time_added()
     return render_template("index.html",
-                           recipe=mongo.db.recipe.find({"category": category}))
+                           recipe=mongo.db.recipe.find({"category": category}), added_latest=time_added())
 
 
 @ app.route('/edit_recipe/<recipes_id>')
@@ -128,6 +110,30 @@ def contact_us_form():
                 request.form['first_name']))
             return redirect(url_for("contact_us"))
     return render_template("contact_us.html", error=error)
+
+
+def time_added():
+    lists = []
+    list2 = []
+    dicts = {}
+    a = mongo.db.recipe.find().sort("date", -1)
+    for z in a:
+        j = z["date"]
+        x = datetime.today()
+        l = datetime.strptime(j, '%Y-%m-%d %H:%M:%S.%f')
+        v = x-l
+        i = v.total_seconds()
+        o = str(humanize.naturaltime(i))
+        if i < 86400:
+            lists.append([o, "new"])
+            list2.append(j)
+        else:
+            lists.append(o)
+            list2.append(j)
+        keys = range(0, len(lists))
+    for b in keys:
+        dicts[list2[b]] = [lists[b]]
+    return dicts
 
 
 if __name__ == '__main__':
