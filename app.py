@@ -3,6 +3,8 @@ from flask import Flask, flash, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from flask_share import Share
+from datetime import datetime, timedelta
+import humanize
 
 
 app = Flask(__name__)
@@ -19,11 +21,32 @@ share.init_app(app)
 @app.route('/')
 @app.route('/index')
 def get_tasks():
+    lists = []
+    list2 = []
+    dicts = {}
+    a = mongo.db.recipe.find().sort("date", -1)
+    for z in a:
+        j = z["date"]
+        x = datetime.today()
+        l = datetime.strptime(j, '%Y-%m-%d %H:%M:%S.%f')
+        v = x-l
+        i = v.total_seconds()
+        o = str(humanize.naturaltime(i))
+        if i < 86400:
+            lists.append([o, "new"])
+            list2.append(j)
+        else:
+            lists.append(o)
+            list2.append(j)
+        keys = range(0, len(lists))
+    for b in keys:
+        dicts[list2[b]] = [lists[b]]
+
     return render_template("index.html",
-                           recipe=mongo.db.recipe.find())
+                           recipe=mongo.db.recipe.find().sort("date", -1), added_latest=dicts)
 
 
-@app.route('/index/<category>')
+@ app.route('/index/<category>')
 def get_categories(category):
     return render_template("index.html",
                            recipe=mongo.db.recipe.find({"category": category}))
@@ -49,9 +72,10 @@ def dish(recipes_id):
 
 @ app.route('/add_recipe')
 def add_recipe():
+    x = datetime.now()
     return render_template('add_recipe.html',
                            levels=mongo.db.difficulty.find(), time=mongo.db.prep_time.find(),
-                           categoriess=mongo.db.categories.find())
+                           categoriess=mongo.db.categories.find(), date=x)
 
 
 @ app.route('/insert_task', methods=['POST'])
@@ -72,7 +96,7 @@ def update_recipe(recipes_id):
         'cooking_description': request.form.get('cooking_description'),
         'picture_url': request.form.get('picture_url'),
         "ingrediants": request.form.get('ingrediants'),
-         "category": request.form.get('category'),
+        "category": request.form.get('category'),
     })
     return redirect(url_for('get_tasks'))
 

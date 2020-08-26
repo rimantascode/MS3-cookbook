@@ -43,7 +43,9 @@ nav {
 }
 /* ------------------------------------------------ main picture area ----- */
 .picture-area {
-  background-color: #666666;
+}
+.picture-area-dish {
+  background-color: none;
 }
 .picture-area img {
   display: block;
@@ -128,6 +130,8 @@ nav {
 }
 .title {
   text-align: center;
+  margin-top: 48px;
+  font-size: 1.6rem;
 }
 .info-container {
   margin: 0 auto;
@@ -153,6 +157,24 @@ ul.a li {
 .btn-large,
 .btn-small {
   margin-bottom: 10px !important;
+}
+.time {
+  float: right;
+  margin-right: 15px;
+  padding-top: 0px;
+}
+.ago-time-hot {
+  font-size: 20px;
+  color: red;
+  margin-top: 3px;
+}
+.ago-time-hot i {
+  font-size: 25px;
+}
+
+.ago-time {
+  font-size: 20px;
+  color: green;
 }
 
 /* ------------------------------------------------ add button and share links ----- */

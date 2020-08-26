@@ -11,6 +11,19 @@
           </div>
 					<div class=" col m7 l7 card-stacked">
 						<div class="card-content">
+						<div>
+                        {%for a, b in added_latest.items() %}
+                        {%if a==ingrediants.date and b[0][1]=="new"%}
+                            <div class="time">
+							<p class="ago-time-hot">{{b[0][0]}} <i class="fas fa-fire-alt"></i></p>
+                            </div>
+                            {%elif a==ingrediants.date and b[0][1]!="new" %}
+                            <div class="time">
+							<p class="ago-time">{{b[0]}}</p>
+                            </div>
+                        {%endif%}
+                        {%endfor%}
+                        </div>
 							<div class="info-window">
 								<h4 class="title">{{ingrediants.recipe_name}}</h4>
 								<div class="info-container">
