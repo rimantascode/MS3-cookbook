@@ -116,9 +116,13 @@
 
       <!-- search results -->
       <div class="col s12 search-result-bar list-icon">
-        <h5><i class="fas fa-th-list"></i> <span>ALL RECIPES</span></h5>
+        {%for a in cate %}
+        <h5>
+          <i class="fas fa-th-list"></i>
+          <span>{{a.category}}{{contact_us}}</span>
+        </h5>
+        {%endfor%}
       </div>
-
       {% block content %} {% endblock %}
     </div>
     {% endblock %}

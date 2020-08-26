@@ -31,7 +31,7 @@ def get_tasks():
 def get_categories(category):
     time_added()
     return render_template("index.html",
-                           recipe=mongo.db.recipe.find({"category": category}), added_latest=time_added())
+                           recipe=mongo.db.recipe.find({"category": category}), added_latest=time_added(), cate=mongo.db.recipe.find({"category": category}))
 
 
 @ app.route('/edit_recipe/<recipes_id>')
