@@ -24,14 +24,14 @@ def get_tasks():
     time_added()
 
     return render_template("index.html",
-                           recipe=mongo.db.recipe.find().sort("date", -1), added_latest=time_added())
+                           recipe=mongo.db.recipe.find().sort("date", -1), added_latest=time_added(), all_recipes="All recipes")
 
 
 @ app.route('/index/<category>')
 def get_categories(category):
     time_added()
     return render_template("index.html",
-                           recipe=mongo.db.recipe.find({"category": category}), added_latest=time_added(), cate=mongo.db.recipe.find({"category": category}))
+                           recipe=mongo.db.recipe.find({"category": category}), added_latest=time_added(), cate=mongo.db.recipe.find({"category": category}), hidden="hidden")
 
 
 @ app.route('/edit_recipe/<recipes_id>')
@@ -91,12 +91,12 @@ def delete_recipe(recipes_id):
 
 @ app.route('/about_us')
 def about_us():
-    return render_template('about_us.html')
+    return render_template('about_us.html', about_us="About Us", hidden="hidden")
 
 
-@ app.route('/contact_us')
+@app.route('/contact_us')
 def contact_us():
-    return render_template("contact_us.html")
+    return render_template("contact_us.html", contact_us="Contact Us", hidden="hidden")
 
 
 @ app.route("/contact_us_form", methods=['GET', 'POST'])

@@ -45,6 +45,9 @@
           <li class="nav-links"><a href="/index/Pork">PORK</a></li>
           <li class="nav-links"><a href="/index/Sea Food">SEA FOOD</a></li>
           <li class="nav-links"><a href="/index/Salad">SALAD</a></li>
+          <li class="nav-links">
+            <a href="/index">All Recipes</a>
+          </li>
         </ul>
       </div>
 
@@ -116,12 +119,16 @@
 
       <!-- search results -->
       <div class="col s12 search-result-bar list-icon">
-        {%for a in cate %}
         <h5>
+          {%for a in cate %}
           <i class="fas fa-th-list"></i>
-          <span>{{a.category}}{{contact_us}}</span>
+          <span>{{a.category}}</span>
+          {%endfor%}
+
+          <i class="fas fa-th-list" {{hidden}}></i>
+
+          <span>{{all_recipes}}{{contact_us}}{{about_us}}</span>
         </h5>
-        {%endfor%}
       </div>
       {% block content %} {% endblock %}
     </div>
