@@ -87,6 +87,7 @@ nav {
 }
 .card.horizontal {
   border-radius: 30px;
+  border-bottom-left-radius: 0px;
 }
 .round-image {
   border-top-left-radius: 30px !important;
@@ -183,7 +184,8 @@ ul.a li {
   color: green;
 }
 .for-pic {
-  border: 1px solid green;
+  margin-top: 19px;
+  margin-left: 19px;
 }
 .card.horizontal .card-image img {
   width: 100% !important;
@@ -247,7 +249,6 @@ ul.share-links {
   color: #edebeb;
 }
 .card-stacked {
-  border: 1px solid red;
   float: right !important;
 }
 .card-stacked a {
@@ -392,6 +393,10 @@ select {
   .card.horizontal .row {
     margin: 0 !important;
   }
+  .card.horizontal .card-image {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   .card-image {
     max-width: 100% !important ;
     max-height: 250px !important;
@@ -412,7 +417,6 @@ select {
   .size {
     width: 100% !important;
     height: 250px !important;
-    border: 1px solid green !important;
   }
   .title {
     text-align: center;
@@ -422,7 +426,9 @@ select {
   ul.a:not(.browser-default) > li {
     text-align: justify;
     align-content: center;
-    
+  }
+  .for-pic {
+    margin: 0;
   }
 }
 @media only screen and (max-width: 851px) {
