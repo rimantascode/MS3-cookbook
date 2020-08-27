@@ -25,113 +25,119 @@
   </head>
 
   <body>
-    <!--This NAVBAR is for the bigger screens-->
-    <nav>
-      <div class="nav-wrapper my-nav">
-        <a href="/index" class="brand-logo"
-          ><i class="material-icons prefix selects">home</i></a
-        >
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-          ><i class="material-icons">menu</i></a
-        >
-        <ul class="centered hide-on-med-and-down">
-          <li class="nav-links dropdown-trigger">
-            <a href="/index/Poultry">POULTRY</a>
+    <header>
+      <!--This NAVBAR is for the bigger screens-->
+      <nav>
+        <div class="nav-wrapper my-nav">
+          <a href="/index" class="brand-logo"
+            ><i class="material-icons prefix selects">home</i></a
+          >
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+          <ul class="centered hide-on-med-and-down">
+            <li class="nav-links dropdown-trigger">
+              <a href="/index/Poultry">POULTRY</a>
+            </li>
+            <li class="nav-links">
+              <a class="dropdown-trigger" href="/index/Red Meat">RED MEAT</a>
+            </li>
+            <li class="nav-links"><a href="/index/Pork">PORK</a></li>
+            <li class="nav-links"><a href="/index/Sea Food">SEA FOOD</a></li>
+            <li class="nav-links"><a href="/index/Salad">SALAD</a></li>
+            <li class="nav-links">
+              <a href="/index">All Recipes</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--This peace navbar peace is for smaller secreens -->
+        <ul class="sidenav" id="mobile-demo">
+          <li>
+            <a
+              class="dropdown-trigger"
+              href="/index/Poultry"
+              data-target="dropdown2"
+              >POULTRY</a
+            >
           </li>
-          <li class="nav-links">
-            <a class="dropdown-trigger" href="/index/Red Meat">RED MEAT</a>
+          <li>
+            <a
+              class="dropdown-trigger"
+              href="/index/Red Meat"
+              data-target="dropdown3"
+              >RED MEAT</a
+            >
           </li>
-          <li class="nav-links"><a href="/index/Pork">PORK</a></li>
-          <li class="nav-links"><a href="/index/Sea Food">SEA FOOD</a></li>
-          <li class="nav-links"><a href="/index/Salad">SALAD</a></li>
-          <li class="nav-links">
-            <a href="/index">All Recipes</a>
-          </li>
+          <li><a href="/index/Pork">PORK</a></li>
+          <li><a href="/index/Sea Food">SEA FOOD</a></li>
+          <li><a href="/index/Salad">SALAD</a></li>
         </ul>
+      </nav>
+    </header>
+    <main>
+      {% block dish %}
+
+      <!-- The main picture area -->
+      <div class="col s12 container picture-area">
+        <img
+          class="responsive-img"
+          src="{{url_for('static',filename='images/102679650_cd10235c8f_k.jpg')}}"
+        />
       </div>
 
-      <!--This peace navbar peace is for smaller secreens -->
-      <ul class="sidenav" id="mobile-demo">
-        <li>
-          <a
-            class="dropdown-trigger"
-            href="/index/Poultry"
-            data-target="dropdown2"
-            >POULTRY</a
-          >
-        </li>
-        <li>
-          <a
-            class="dropdown-trigger"
-            href="/index/Red Meat"
-            data-target="dropdown3"
-            >RED MEAT</a
-          >
-        </li>
-        <li><a href="/index/Pork">PORK</a></li>
-        <li><a href="/index/Sea Food">SEA FOOD</a></li>
-        <li><a href="/index/Salad">SALAD</a></li>
-      </ul>
-    </nav>
-    {% block dish %}
-    <!-- The main picture area -->
-    <div class="col s12 container picture-area">
-      <img
-        class="responsive-img"
-        src="{{url_for('static',filename='images/102679650_cd10235c8f_k.jpg')}}"
-      />
-    </div>
-    <!-- search results, those results will be the desplayd in this main page-->
+      <!-- search results, those results will be the desplayd in this main page-->
 
-    <div class="col s12 container search-results">
-      <div class="col s12 search-result-bar">
-        <a
-          href="{{url_for('add_recipe')}}"
-          class="btn-floating btn-medium waves-effect waves-light red add-button"
-          ><i class="material-icons">add</i></a
-        >
-        <div class="share">
-          <div class="share-div">
-            <h4>Share</h4>
-          </div>
-          <div class="share-links-container">
-            <ul class="share-links">
-              <div class="circle-around-social-links">
-                <li>
-                  <a href="#"><i class="fab fa-facebook"></i></a>
-                </li>
-              </div>
-              <div class="circle-around-social-links">
-                <li>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                </li>
-              </div>
-              <div class="circle-around-social-links">
-                <li>
-                  <a href="#"><i class="fab fa-instagram-square"></i></a>
-                </li>
-              </div>
-            </ul>
+      <div class="col s12 container search-results">
+        <div class="col s12 search-result-bar">
+          <a
+            href="{{url_for('add_recipe')}}"
+            class="btn-floating btn-medium waves-effect waves-light red add-button"
+            ><i class="material-icons">add</i></a
+          >
+          <div class="share">
+            <div class="share-div">
+              <h4>Share</h4>
+            </div>
+            <div class="share-links-container">
+              <ul class="share-links">
+                <div class="circle-around-social-links">
+                  <li>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                  </li>
+                </div>
+                <div class="circle-around-social-links">
+                  <li>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </li>
+                </div>
+                <div class="circle-around-social-links">
+                  <li>
+                    <a href="#"><i class="fab fa-instagram-square"></i></a>
+                  </li>
+                </div>
+              </ul>
+            </div>
           </div>
         </div>
+
+        <!-- search results -->
+        <div class="col s12 search-result-bar list-icon">
+          <h5>
+            {%for a in cate %}
+            <i class="fas fa-th-list"></i>
+            <span>{{a.category}}</span>
+            {%endfor%}
+
+            <i class="fas fa-th-list" {{hidden}}></i>
+
+            <span>{{all_recipes}}{{contact_us}}{{about_us}}</span>
+          </h5>
+        </div>
+        {% block content %} {% endblock %}
       </div>
-
-      <!-- search results -->
-      <div class="col s12 search-result-bar list-icon">
-        <h5>
-          {%for a in cate %}
-          <i class="fas fa-th-list"></i>
-          <span>{{a.category}}</span>
-          {%endfor%}
-
-          <i class="fas fa-th-list" {{hidden}}></i>
-
-          <span>{{all_recipes}}{{contact_us}}{{about_us}}</span>
-        </h5>
-      </div>
-      {% block content %} {% endblock %}
-    </div>
-    {% endblock %}
+      {% endblock %}
+    </main>
     <footer class="page-footer the-footer">
       <div class="container">
         <div class="row">

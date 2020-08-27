@@ -371,6 +371,16 @@ select {
 .footer-links a {
   font-size: 16px !important;
 }
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
 /* ------------------------------------------------ about_us.html----- */
 .center-heading {
   text-align: center;
