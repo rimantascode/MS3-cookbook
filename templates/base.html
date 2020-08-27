@@ -224,12 +224,14 @@
 
         if (z >= 0) {
           $("#add_recipe").prop("disabled", true);
+          $("#update").prop("disabled", true);
           $("#count")
             .css({ color: "red" })
             .text("Character left " + z)
             .show(1000);
         } else {
           $("#add_recipe").prop("disabled", false);
+          $("#update").prop("disabled", false);
 
           $("#count").css({ color: "green" }).text("Thank You ").hide(1000);
         }
