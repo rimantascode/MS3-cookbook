@@ -62,23 +62,40 @@ def add_recipe():
 
 @ app.route('/insert_task', methods=['POST'])
 def insert_recipe():
+    x = str(datetime.now())
     tasks = mongo.db.recipe
     tasks.insert_one(request.form.to_dict())
+    tasks.insert_one(
+        {
+            "recipe_name": request.form.getlist('recipe_name')[0].upper(),
+            'difficulty_level': request.form.get('difficulty_level'),
+            'prep_time': request.form.get('prep_time'),
+            'cooking_description': request.form.get('cooking_description'),
+            'picture_url': request.form.get('picture_url'),
+            "ingrediants": request.form.get('ingrediants'),
+            "category": request.form.get('category'),
+            "date": x,
+
+        })
+
+    print(request.form)
     return redirect(url_for('get_tasks'))
 
 
 @ app.route('/update_task/<recipes_id>', methods=["POST"])
 def update_recipe(recipes_id):
+    x = str(datetime.now())
     recipe = mongo.db.recipe
     recipe.update({'_id': ObjectId(recipes_id)},
                   {
-        'recipe_name': request.form.get('recipe_name'),
+        'recipe_name': request.form.get('recipe_name').upper(),
         'difficulty_level': request.form.get('difficulty_level'),
         'prep_time': request.form.get('prep_time'),
         'cooking_description': request.form.get('cooking_description'),
         'picture_url': request.form.get('picture_url'),
         "ingrediants": request.form.get('ingrediants'),
         "category": request.form.get('category'),
+        "date": x,
     })
     return redirect(url_for('get_tasks'))
 
