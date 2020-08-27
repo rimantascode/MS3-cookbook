@@ -17,6 +17,8 @@ mongo = PyMongo(app)
 share = Share()
 share.init_app(app)
 
+print("this is " + app.config["SECRET_KEY"])
+
 
 @app.route('/')
 @app.route('/index')
