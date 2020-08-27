@@ -131,7 +131,9 @@ nav {
 .title {
   text-align: center;
   margin-top: 48px;
-  font-size: 1.6rem;
+  font-size: 3rem;
+  height: 48px;
+  overflow: hidden;
 }
 .info-container {
   margin: 0 auto;
@@ -142,6 +144,7 @@ nav {
 ul.a:not(.browser-default) > li {
   text-align: justify;
   align-content: center;
+  margin: 20px;
 }
 ul.a:not(.browser-default) {
   padding: 2px 20px 4px 2px !important;
@@ -152,6 +155,7 @@ ul.a li {
 .size {
   height: 450px !important;
   object-fit: cover;
+  width: 500px;
 }
 .btn,
 .btn-large,
@@ -175,6 +179,12 @@ ul.a li {
 .ago-time {
   font-size: 20px;
   color: green;
+}
+.for-pic {
+  border: 1px solid green;
+}
+.card.horizontal .card-image img {
+  width: 100% !important;
 }
 
 /* ------------------------------------------------ add button and share links ----- */
@@ -230,8 +240,15 @@ ul.share-links {
   padding-left: 5px;
   color: #edebeb;
 }
+.card-stacked {
+  border: 1px solid red;
+  float: right !important;
+}
 .card-stacked a {
   z-index: 0;
+}
+.dd {
+  float: right;
 }
 
 /* ------------------------------------------------ list icon----- */
@@ -316,6 +333,9 @@ select {
   position: absolute;
   left: 1.5rem;
 }
+#count {
+  margin-left: 40px;
+}
 
 /* ------------------------------------------------ Footer----- */
 .the-footer {
@@ -363,10 +383,13 @@ select {
 }
 
 @media only screen and (max-width: 600px) {
-  .card.horizontal .card-image {
-    max-width: 100% !important;
+  .card.horizontal {
+  }
+  .card-image {
+    max-width: 100% !important ;
     max-height: 250px !important;
     object-fit: cover;
+    width: 100% !important;
   }
   .ca {
     /* height: 800px !important;*/
@@ -382,6 +405,7 @@ select {
   .size {
     width: 100% !important;
     height: 250px !important;
+    border: 1px solid green !important;
   }
 }
 @media only screen and (max-width: 1200px) {

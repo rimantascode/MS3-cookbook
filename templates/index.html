@@ -6,10 +6,15 @@
 	<div class="search-results-list">
 		<div class="card horizontal z-depth-4">
 			<div class="row">
+           
 				<div class=" col m5 l5 card-image">
+				<div class="for-pic">
 					<img src="{{ingrediants.picture_url}}" class="round-image size" />
+                </div>
           </div>
-					<div class=" col m7 l7 card-stacked">
+                    <div class=" col m7 l7 dd">
+					<div class="card-stacked">
+                        <div>
 						<div class="card-content">
 						<div>
                         {%for a, b in added_latest.items() %}
@@ -47,6 +52,7 @@
                                     <li> {{ingrediants.ingrediants}} </li>		
                                 </ul>                               
 							</p>
+                            </div>
 						</div>		
 						<a href="{{url_for('delete_recipe',recipes_id=ingrediants._id)}}"
 							class="waves-effect waves-light btn btn_small blue xx">DELETE</a>
@@ -55,6 +61,7 @@
 						class="waves-effect waves-light btn btn_small blue">See Recipe</a>
                         
 					</div>
+                    </div> <!-- additional div-->
 				</div>
 
 			</div>
