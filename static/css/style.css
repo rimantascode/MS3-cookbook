@@ -131,8 +131,8 @@ nav {
 .title {
   text-align: center;
   margin-top: 48px;
-  font-size: 3rem;
-  height: 48px;
+  font-size: 2rem;
+
   overflow: hidden;
 }
 .info-container {
@@ -144,8 +144,8 @@ nav {
 ul.a:not(.browser-default) > li {
   text-align: justify;
   align-content: center;
-  margin: 20px;
-  height: 30px;
+
+  height: 100px;
   overflow: hidden;
 }
 ul.a:not(.browser-default) {
@@ -187,6 +187,10 @@ ul.a li {
 }
 .card.horizontal .card-image img {
   width: 100% !important;
+}
+.card-content {
+  padding-bottom: 7px !important;
+  height: 333px !important;
 }
 
 /* ------------------------------------------------ add button and share links ----- */
@@ -385,7 +389,8 @@ select {
 }
 
 @media only screen and (max-width: 600px) {
-  .card.horizontal {
+  .card.horizontal .row {
+    margin: 0 !important;
   }
   .card-image {
     max-width: 100% !important ;
@@ -409,6 +414,22 @@ select {
     height: 250px !important;
     border: 1px solid green !important;
   }
+  .title {
+    text-align: center;
+    margin-top: 48px;
+    font-size: 1.2rem;
+  }
+  ul.a:not(.browser-default) > li {
+    text-align: justify;
+    align-content: center;
+    
+  }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 851px) {
+}
+ul.a:not(.browser-default) > li {
+  text-align: justify;
+  align-content: center;
+  height: 60px;
+  overflow: hidden;
 }

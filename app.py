@@ -64,7 +64,6 @@ def add_recipe():
 def insert_recipe():
     x = str(datetime.now())
     tasks = mongo.db.recipe
-    tasks.insert_one(request.form.to_dict())
     tasks.insert_one(
         {
             "recipe_name": request.form.getlist('recipe_name')[0].upper(),
