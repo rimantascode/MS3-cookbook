@@ -5,8 +5,11 @@ from bson.objectid import ObjectId
 from flask_share import Share
 from datetime import datetime, timedelta
 import humanize
+from flask_paginate import Pagination, get_page_parameter, get_page_args
+from flask import Blueprint
 
 
+mod = Blueprint('users', __name__)
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get('SECRET_KEY', 'dev')
 app.config["MONGO_DBNAME"] = 'cook_book'
@@ -24,9 +27,30 @@ print("this is " + app.config["SECRET_KEY"])
 @app.route('/index')
 def get_tasks():
     time_added()
+    search = False
+    q = request.args.get('q')
+    if q:
+        search = True
 
+    page = request.args.get(get_page_parameter(), type=int, default=1)
+    per_page = 4
+    offset = (page - 1) * per_page
+
+    users = mongo.db.recipe.find().sort("date", -1).skip(offset).limit(per_page)
+    pagination = Pagination(page=page, total=users.count(),
+                            search=search, record_name='users', offset=offset, per_page=per_page)
+
+    return render_template('index.html',
+                           users=users,
+                           pagination=pagination, added_latest=time_added(), all_recipes="All recipes"
+                           )
+
+
+"""
     return render_template("index.html",
-                           recipe=mongo.db.recipe.find().sort("date", -1), added_latest=time_added(), all_recipes="All recipes")
+                           added_latest=time_added(), all_recipes="All recipes")
+
+"""
 
 
 @ app.route('/index/<category>')
@@ -78,8 +102,6 @@ def insert_recipe():
             "date": x,
 
         })
-
-    print(request.form)
     return redirect(url_for('get_tasks'))
 
 
@@ -152,6 +174,9 @@ def time_added():
     for b in keys:
         dicts[list2[b]] = [lists[b]]
     return dicts
+
+
+
 
 
 if __name__ == '__main__':

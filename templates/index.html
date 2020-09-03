@@ -1,6 +1,10 @@
 
 {% extends 'base.html'%} {% block content %}
-	{%for ingrediants in recipe %}
+
+{{ pagination.info }}
+{{ pagination.links|safe }}
+	{%for ingrediants in users %}
+  
     <div class="ca">
     <div class="row">
 	<div class="search-results-list">
@@ -75,3 +79,4 @@
 {%endfor%}
 
 {%endblock%}
+{{ pagination.links }}
