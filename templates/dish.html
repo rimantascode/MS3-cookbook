@@ -37,12 +37,17 @@
 
     <div class="share">
       <div class="share-div">
-        <!--<h4>Share</h4>-->
-        <h4>
-          {{ share.create(title='Share with: ', sites='facebook, twitter,
-          linkedin',mobile_sites='facebook, twitter,linkedin' ) }}{{share.load()
-          }}
-        </h4>
+        <h4>Share</h4>
+      </div>
+      <div class="share-links-container">
+        <ul class="share-links">
+          <li>
+            {{ share.create( sites='facebook, twitter,linkedin',
+            mobile_sites='facebook,
+            twitter,linkedin',addition_class='circle-around-social-links a' )
+            }}{{share.load() }}
+          </li>
+        </ul>
       </div>
     </div>
   </div>

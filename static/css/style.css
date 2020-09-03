@@ -225,6 +225,7 @@ ul.a li {
 .share h4 {
   display: inline;
 }
+/*
 .circle-around-social-links {
   width: 36px;
   height: 36px;
@@ -234,7 +235,12 @@ ul.a li {
   border: 2px solid #ffffff;
   margin-top: 10px;
 }
-
+*/
+.circle-around-social-links a {
+  background-color: #ff9900;
+  border: 2px solid #ffffff !important;
+  color: #f7f7f7 !important;
+}
 ul.share-links li {
   display: inline-block;
   line-height: 56px;
@@ -355,6 +361,7 @@ select {
   padding-left: 5px;
   color: #edebeb;
 }
+
 .circle-around-social-links-footer {
   width: 36px;
   height: 36px;
@@ -365,6 +372,7 @@ select {
   margin-top: 10px;
   margin-right: 5px;
 }
+
 .footer-links {
   padding-bottom: 8px;
 }

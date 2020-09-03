@@ -100,8 +100,10 @@
             <div class="share-links-container">
               <ul class="share-links">
                 <li>
-                  {{ share.create( sites='facebook', mobile_sites='facebook', )
-                  }}{{share.load() }}
+                  {{ share.create( sites='facebook, twitter,linkedin',
+                  mobile_sites='facebook,
+                  twitter,linkedin',addition_class='circle-around-social-links
+                  a' ) }}{{share.load() }}
                 </li>
                 <!--
                 <div class="circle-around-social-links">
