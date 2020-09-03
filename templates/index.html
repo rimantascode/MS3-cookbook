@@ -1,16 +1,13 @@
 
 {% extends 'base.html'%} {% block content %}
-
 {{ pagination.info }}
-{{ pagination.links|safe }}
-	{%for ingrediants in users %}
-  
+<div class="pagination">{{ pagination.links|safe }}</div>
+	{%for ingrediants in recipe %}
     <div class="ca">
     <div class="row">
 	<div class="search-results-list">
 		<div class="card horizontal z-depth-4">
-			<div class="row">
-           
+			<div class="row">        
 				<div class=" col m5 l5 card-image">
 				<div class="for-pic">
 					<img src="{{ingrediants.picture_url}}" class="round-image size" />
@@ -77,6 +74,6 @@
         </div>
       
 {%endfor%}
-
+<div class="pagination">{{ pagination.links|safe }}</div>
 {%endblock%}
-{{ pagination.links }}
+

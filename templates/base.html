@@ -76,7 +76,6 @@
     </header>
     <main>
       {% block dish %}
-
       <!-- The main picture area -->
       <div class="col s12 container picture-area">
         <img
@@ -123,13 +122,9 @@
         <!-- search results -->
         <div class="col s12 search-result-bar list-icon">
           <h5>
-            {%for a in cate %}
             <i class="fas fa-th-list"></i>
-            <span>{{a.category}}</span>
-            {%endfor%}
-
+            <span>{{category}}</span>
             <i class="fas fa-th-list" {{hidden}}></i>
-
             <span>{{all_recipes}}{{contact_us}}{{about_us}}</span>
           </h5>
         </div>

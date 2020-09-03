@@ -36,12 +36,12 @@ def get_tasks():
     per_page = 4
     offset = (page - 1) * per_page
 
-    users = mongo.db.recipe.find().sort("date", -1).skip(offset).limit(per_page)
-    pagination = Pagination(page=page, total=users.count(),
+    recipe = mongo.db.recipe.find().sort("date", -1).skip(offset).limit(per_page)
+    pagination = Pagination(page=page, total=recipe.count(),
                             search=search, record_name='users', offset=offset, per_page=per_page)
 
     return render_template('index.html',
-                           users=users,
+                           recipe=recipe,
                            pagination=pagination, added_latest=time_added(), all_recipes="All recipes"
                            )
 
@@ -55,9 +55,21 @@ def get_tasks():
 
 @ app.route('/index/<category>')
 def get_categories(category):
-    time_added()
+    search = False
+    q = request.args.get('q')
+    if q:
+        search = True
+
+    page = request.args.get(get_page_parameter(), type=int, default=1)
+    per_page = 4
+    offset = (page - 1) * per_page
+
+    recipes = mongo.db.recipe.find({"category": category})
+    pagination = Pagination(page=page, total=recipes.count(),
+                            search=search, record_name='users', offset=offset, per_page=per_page)
+
     return render_template("index.html",
-                           recipe=mongo.db.recipe.find({"category": category}), added_latest=time_added(), cate=mongo.db.recipe.find({"category": category}), hidden="hidden")
+                           recipe=mongo.db.recipe.find({"category": category}).sort("date", -1).skip(offset).limit(per_page), added_latest=time_added(), category=category, pagination=pagination, hidden="hidden")
 
 
 @ app.route('/edit_recipe/<recipes_id>')

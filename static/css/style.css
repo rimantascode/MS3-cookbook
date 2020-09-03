@@ -415,6 +415,11 @@ main {
   padding: 0.1em 0.25em;
   font-size: 150%;
 }
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media only screen and (max-width: 600px) {
   .card.horizontal .row {
