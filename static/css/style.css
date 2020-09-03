@@ -98,7 +98,6 @@ nav {
 .short-info {
   height: 60px;
   width: 110px;
-
   display: inline-block;
   position: relative;
   margin: 0 auto;
@@ -403,7 +402,6 @@ main {
 .pagination-page-info {
   padding: 0.6em;
   padding-left: 0;
-  width: 40em;
   margin: 0.5em;
   margin-left: 0;
   font-size: 12px;
