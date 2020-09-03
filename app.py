@@ -88,6 +88,12 @@ def add_recipe():
 
 @ app.route('/insert_task', methods=['POST'])
 def insert_recipe():
+    if request.method == 'POST':
+        ingrediants_len = len(request.form["ingrediants"])
+        if len(request.form["ingrediants"]) < 200:
+            ingrediants = request.form["ingrediants"]+" "*(200-ingrediants_len)
+        else:
+            ingrediants = request.form["ingrediants"]
     x = str(datetime.now())
     tasks = mongo.db.recipe
     tasks.insert_one(
@@ -97,7 +103,7 @@ def insert_recipe():
             'prep_time': request.form.get('prep_time'),
             'cooking_description': request.form.get('cooking_description'),
             'picture_url': request.form.get('picture_url'),
-            "ingrediants": request.form.get('ingrediants'),
+            "ingrediants": ingrediants,
             "category": request.form.get('category'),
             "date": x,
 
@@ -107,6 +113,12 @@ def insert_recipe():
 
 @ app.route('/update_task/<recipes_id>', methods=["POST"])
 def update_recipe(recipes_id):
+    if request.method == 'POST':
+        ingrediants_len = len(request.form["ingrediants"])
+        if len(request.form["ingrediants"]) < 200:
+            ingrediants = request.form["ingrediants"]+" "*(200-ingrediants_len)
+        else:
+            ingrediants = request.form["ingrediants"]
     x = str(datetime.now())
     recipe = mongo.db.recipe
     recipe.update({'_id': ObjectId(recipes_id)},
@@ -116,7 +128,7 @@ def update_recipe(recipes_id):
         'prep_time': request.form.get('prep_time'),
         'cooking_description': request.form.get('cooking_description'),
         'picture_url': request.form.get('picture_url'),
-        "ingrediants": request.form.get('ingrediants'),
+        "ingrediants": ingrediants,
         "category": request.form.get('category'),
         "date": x,
     })
@@ -134,7 +146,7 @@ def about_us():
     return render_template('about_us.html', about_us="About Us", hidden="hidden")
 
 
-@app.route('/contact_us')
+@ app.route('/contact_us')
 def contact_us():
     return render_template("contact_us.html", contact_us="Contact Us", hidden="hidden")
 
@@ -174,9 +186,6 @@ def time_added():
     for b in keys:
         dicts[list2[b]] = [lists[b]]
     return dicts
-
-
-
 
 
 if __name__ == '__main__':

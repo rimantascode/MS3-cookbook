@@ -224,14 +224,15 @@
         val = $("#recipe_name").val();
         var x = val.length;
         z = 37 - x;
-        var a = "Chicken brest with pddodf sdftatos and salmon";
+        var a =
+          "400g pork fillet Stuffing666666,1 slice wholemeal bread,1 small onion, finely chopped,fdsdsf ffdfffff";
 
         if (z >= 0) {
           $("#add_recipe").prop("disabled", true);
           $("#update").prop("disabled", true);
           $("#count")
             .css({ color: "red" })
-            .text("Character left " + z)
+            .text("Characters left " + z)
             .show(1000);
         } else {
           $("#add_recipe").prop("disabled", false);
