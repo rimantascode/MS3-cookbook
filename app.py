@@ -66,7 +66,7 @@ def get_categories(category):
 
     recipes = mongo.db.recipe.find({"category": category})
     pagination = Pagination(page=page, total=recipes.count(),
-                            search=search, record_name='users', offset=offset, per_page=per_page)
+                            search=search, record_name='recipes', offset=offset, per_page=per_page)
 
     return render_template("index.html",
                            recipe=mongo.db.recipe.find({"category": category}).sort("date", -1).skip(offset).limit(per_page), added_latest=time_added(), category=category, pagination=pagination, hidden="hidden")

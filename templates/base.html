@@ -99,6 +99,11 @@
             </div>
             <div class="share-links-container">
               <ul class="share-links">
+                <li>
+                  {{ share.create( sites='facebook', mobile_sites='facebook', )
+                  }}{{share.load() }}
+                </li>
+                <!--
                 <div class="circle-around-social-links">
                   <li>
                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -114,6 +119,7 @@
                     <a href="#"><i class="fab fa-instagram-square"></i></a>
                   </li>
                 </div>
+				-->
               </ul>
             </div>
           </div>
