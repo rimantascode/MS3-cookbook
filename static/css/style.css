@@ -81,6 +81,10 @@ nav {
 }
 
 /* ------------------------------------------------ search reults by cards ----- */
+
+.last_update {
+  padding: 10px;
+}
 .ca > .row {
   margin: 0 !important;
   padding: 0 !important;
@@ -158,7 +162,7 @@ ul.a li {
 .size {
   height: 450px !important;
   object-fit: cover;
-  width: 500px;
+  width: 350px;
 }
 .btn,
 .btn-large,
@@ -184,16 +188,35 @@ ul.a li {
   color: green;
 }
 .for-pic {
-  margin-top: 19px;
-  margin-left: 19px;
+  margin-top: 7px;
+  margin-left: 7px;
+  margin-bottom:2px;
 }
 .card.horizontal .card-image img {
-  width: 100% !important;
+  width: 350px !important;
 }
 .card-content {
   padding-bottom: 7px !important;
   height: 333px !important;
 }
+
+p.ingrediants-on-the-card {
+  padding: 20px;
+  text-justify: justify;
+  height: 100px;
+  overflow: hidden;
+}
+.buttons {
+  margin: 0 auto;
+  max-width: 323px;
+}
+.buttons a {
+  width: 105px;
+}
+ .z-depth-2 {
+     border-top-left-radius: 34px;
+ }
+
 
 /* ------------------------------------------------ add button and share links ----- */
 .add-button {
@@ -263,6 +286,7 @@ ul.share-links {
 }
 .dd {
   float: right;
+  width: 100%;
 }
 
 /* ------------------------------------------------ list icon----- */
@@ -436,6 +460,9 @@ main {
     margin: 0 !important;
     padding: 0 !important;
   }
+  .card.horizontal .card-image img {
+    width: 100% !important;
+  }
   .card-image {
     max-width: 100% !important ;
     max-height: 250px !important;
@@ -467,8 +494,19 @@ main {
     align-content: center;
   }
   .for-pic {
-    margin: 0;
+    border-top-left-radius: 30px !important;
+    border-top-right-radius: 30px !important;
+    margin:0;
   }
+  .buttons {
+    max-width: 100%;
+  }
+  .buttons a {
+    width: 100%;
+  }
+  .z-depth-2 {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 @media only screen and (max-width: 851px) {
 }
