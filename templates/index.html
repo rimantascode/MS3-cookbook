@@ -2,84 +2,69 @@
 <div class="pagination">{{ pagination.links|safe }}</div>
 {%for ingrediants in recipe %}
 <div class="ca">
-  <div class="row">
-    <div class="search-results-list">
-      <div class="z-depth-2">
-        <div class="row">
-          <div class="col m5 l5 card-image">
-            <div class="for-pic">
-              <img
-                src="{{ingrediants.picture_url}}"
-                class="round-image size responsive-img"
-              />
-            </div>
-          </div>
-          <div class="col m7 l7 dd">
-            <div>
-              <div class="last_update">
-                {%for a, b in added_latest.items() %} {%if a==ingrediants.date
-                and b[0][1]=="new"%}
-                <div class="time">
-                  <p class="ago-time-hot">
-                    {{b[0][0]}} <i class="fas fa-fire-alt"></i>
-                  </p>
-                </div>
-                {%elif a==ingrediants.date and b[0][1]!="new" %}
-                <div class="time">
-                  <p class="ago-time">{{b[0]}}</p>
-                </div>
-                {%endif%} {%endfor%}
-              </div>
-              <div class="info-window">
-                <h4 class="title">{{ingrediants.recipe_name}}</h4>
-                <div class="info-container">
-                  <div class="short-info">
-                    <div class="circles">
-                      <i class="material-icons">timer</i>
-                    </div>
-                    <div class="data">
-                      {{ingrediants.prep_time}}
-                    </div>
-                  </div>
-                  <div class="short-info">
-                    <div class="circles">
-                      <i class="material-icons">build</i>
-                    </div>
-                    <div class="data">
-                      {{ingrediants.difficulty_level.capitalize()}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="ingrediants-on-the-card">
-                {{ingrediants.ingrediants}}
-              </p>
-              <div class="transpe"></div>
-            </div>
-            <div class="buttons">
-              <a
-                href="{{url_for('delete_recipe',recipes_id=ingrediants._id)}}"
-                class="waves-effect waves-light btn btn_small blue xx"
-                >DELETE</a
-              >
-              <a
-                href="{{url_for('edit_recipe',recipes_id=ingrediants._id)}}"
-                class="waves-effect waves-light btn btn_small blue xx"
-                >Edit</a
-              >
-              <a
-                href="{{url_for('dish',recipes_id=ingrediants._id)}}"
-                class="waves-effect waves-light btn btn_small blue"
-                >See Recipe</a
-              >
-            </div>
-          </div>
-          <!-- additional div-->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{%endfor%}
-<div class="pagination">{{ pagination.links|safe }}</div>
-{%endblock%}
+	<div class="row">
+		<div class="search-results-list">
+			<div class="z-depth-2">
+				<div class="row">
+					<div class="col m5 l5 card-image">
+						<div class="for-pic">
+							<img src="{{ingrediants.picture_url}}" class="round-image size responsive-img" />
+                        </div>
+					</div>
+						<div class="col m7 l7 dd">
+							<div>
+								<div class="last_update">
+									{%for a, b in added_latest.items() %} {%if a==ingrediants.date and b[0][1]=="new"%}
+									<div class="time">
+										<p class="ago-time-hot">{{b[0][0]}} <i class="fas fa-fire-alt"></i></p>
+									</div>
+									{%elif a==ingrediants.date and b[0][1]!="new" %}
+									<div class="time">
+										<p class="ago-time">{{b[0]}}</p>
+									</div>
+									{%endif%} {%endfor%}
+								</div>
+								<div class="info-window">
+									<h4 class="title">{{ingrediants.recipe_name}}</h4>
+									<div class="info-container">
+										<div class="short-info">
+											<div class="circles">
+												<i class="material-icons">timer</i>
+											</div>
+											<div class="data">
+												{{ingrediants.prep_time}}
+											</div>
+										</div>
+										<div class="short-info">
+											<div class="circles">
+												<i class="material-icons">build</i>
+											</div>
+											<div class="data">
+												{{ingrediants.difficulty_level.capitalize()}}
+											</div>
+										</div>
+									</div>
+								</div>
+								<p class="ingrediants-on-the-card">
+									{{ingrediants.ingrediants}}
+								</p>
+								<div class="transpe"></div>
+							</div>
+							<div class="buttons">
+								<a href="{{url_for('delete_recipe',recipes_id=ingrediants._id)}}"
+									class="waves-effect waves-light btn btn_small blue xx">DELETE</a>
+								<a href="{{url_for('edit_recipe',recipes_id=ingrediants._id)}}"
+									class="waves-effect waves-light btn btn_small blue xx">Edit</a>
+								<a href="{{url_for('dish',recipes_id=ingrediants._id)}}"
+									class="waves-effect waves-light btn btn_small blue">See Recipe</a>
+							</div>
+						</div>
+						<!-- additional div-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{%endfor%}
+	<div class="pagination">{{ pagination.links|safe }}</div>
+	{%endblock%}
