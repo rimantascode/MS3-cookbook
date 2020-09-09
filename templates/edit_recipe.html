@@ -6,6 +6,7 @@
 			<div class="row">
 				<div class="input-field col s12">
 					<i class="material-icons prefix selects">build</i>
+					<label class="for-select-label" for="difficulty_level" >Difficulty level</label>
 					<select id="difficulty_level" name="difficulty_level" class="browser-default" required>
                         <option value="" disabled selected>Select The Difficulty Level</option>
                         {%for diff in difficulties %} {% if diff.difficulty_level==recipes.difficulty_level %}
@@ -18,26 +19,28 @@
 			</div>
 			<div class="row">
 				<div class="input-field col s12">
-					<i class="material-icons prefix selects">timer</i>
-					<select id="prep-time" name="prep_time" class="browser-default" required>
-                        <option value="" disabled selected>Preparation Time </option>
-                        {%for t in time %} {%if t.time==recipes.prep_time%}
-                        <option value="{{recipes.prep_time}}" selected>{{recipes.prep_time}}</option>
-                        {%else%}
-                        <option value="{{t.time}}">{{t.time}}</option>
-                        {%endif%} {%endfor%}
-                    </select>
+					<i class="material-icons prefix selects">sort</i>
+						<label class="for-select-label" for="category" >Category</label>
+					<select id="category" name="category" class="browser-default" required>
+			                        <option value="" disabled selected>Select category</option>
+			                        {%for cat in categoriess %}{%if cat.name==recipes.category%}
+			                        <option value="{{recipes.category}}" selected>{{recipes.category}}</option>
+			                        {%else%}
+			                        <option value="{{cat.name}}">{{cat.name}}</option>
+			                        {%endif%} {%endfor%}
+			                    </select>
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s12">
-					<i class="material-icons prefix selects">build</i>
-					<select id="category" name="category" class="browser-default" required>
-                        <option value="" disabled selected>Select category</option>
-                        {%for cat in categoriess %}{%if cat.name==recipes.category%}
-                        <option value="{{recipes.category}}" selected>{{recipes.category}}</option>
+					<i class="material-icons prefix selects">timer</i>
+						<label class="for-select-label" for="prep-time" >Cooking Time</label>
+					<select id="prep-time" name="prep_time" class="browser-default" required>
+                        <option value="" disabled selected>Select Cooking Time </option>
+                        {%for t in time %} {%if t.time==recipes.prep_time%}
+                        <option value="{{recipes.prep_time}}" selected>{{recipes.prep_time}}</option>
                         {%else%}
-                        <option value="{{cat.name}}">{{cat.name}}</option>
+                        <option value="{{t.time}}">{{t.time}}</option>
                         {%endif%} {%endfor%}
                     </select>
 				</div>

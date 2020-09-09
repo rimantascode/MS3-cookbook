@@ -11,6 +11,9 @@ footer {
 }
 */
 
+h3 {
+    margin-bottom:40px!important;
+}
 /* ------------------------------------------------ NAV BAR ----- */
 nav {
   position: fixed;
@@ -372,6 +375,9 @@ select {
 }
 #count {
   margin-left: 40px;
+}
+.for-select-label {
+    margin-top:-40px;
 }
 
 /* ------------------------------------------------ Footer----- */

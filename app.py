@@ -21,8 +21,6 @@ mongo = PyMongo(app)
 share = Share()
 share.init_app(app)
 
-print 'this is ' + app.config['SECRET_KEY']
-
 
 @app.route('/')
 @app.route('/index')
@@ -43,7 +41,7 @@ def get_tasks():
         page=page,
         total=recipe.count(),
         search=search,
-        record_name='users',
+        record_name='Recipes',
         offset=offset,
         per_page=per_page,
         )
