@@ -62,18 +62,18 @@ The users also are able to edit the existing recipe by clickig edit button strai
   ##############################################################################
   (https://meyerweb.com/eric/tools/color-blend/#:::hex)
   - ![#f7f7f7](https://placehold.it/15/f7f7f7/000000?text=+) `#f7f7f7`
-  - ![#964600](https://placehold.it/15/29a5e2/000000?text=+) `#964600`
+  - ![#964600](https://placehold.it/15/964600/000000?text=+) `#964600`
   - ![#666666](https://placehold.it/15/666666/000000?text=+) `#666666`
   - ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) `#ffffff`
-  - ![#f5f5dc](https://placehold.it/15/ffffff/000000?text=+) `#f5f5dc`
-  - ![#ff9900](https://placehold.it/15/ffffff/000000?text=+) `#ff9900`
-  - ![red](https://placehold.it/15/ffffff/000000?text=+) `red`
-  - ![#edebeb](https://placehold.it/15/ffffff/000000?text=+) `#edebeb`
-  - ![black](https://placehold.it/15/ffffff/000000?text=+) `black`
-  - ![#008464 ](https://placehold.it/15/ffffff/000000?text=+) `#008464`
-  - ![#0761afb3](https://placehold.it/15/ffffff/000000?text=+) `#0761afb3`
-  - ![#ec373780](https://placehold.it/15/ffffff/000000?text=+) `#ec373780`
-  - ![#6aa6ed](https://placehold.it/15/ffffff/000000?text=+) `#6aa6ed`
+  - ![#f5f5dc](https://placehold.it/15/f5f5dc/000000?text=+) `#f5f5dc`
+  - ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `#ff9900`
+  - ![red](https://placehold.it/15/red/000000?text=+) `red`
+  - ![#edebeb](https://placehold.it/15/edebeb/000000?text=+) `#edebeb`
+  - ![black](https://placehold.it/15/black/000000?text=+) `black`
+  - ![#008464 ](https://placehold.it/15/008464/000000?text=+) `#008464`
+  - ![#0761afb3](https://placehold.it/15/0761afb3/000000?text=+) `#0761afb3`
+  - ![#ec373780](https://placehold.it/15/ec373780/000000?text=+) `#ec373780`
+  - ![#6aa6ed](https://placehold.it/15/6aa6ed/000000?text=+) `#6aa6ed`
 
 
 ## Typography
@@ -157,7 +157,7 @@ This project makes use of:
   - Testing responsiveness of the website **Am I Responsive**
 - [Figma](https://www.figma.com/)
   - used to make a mockup
-- All the labraries including the flask micro Framework have to installed. All of them ish listed in the requirements.txt, how to install please Deployment section.
+- All the labraries including the flask micro Framework have to installed. All of them is listed in the requirements.txt, how to install please Deployment section.
 
 
 ### Manual Testing
