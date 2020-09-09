@@ -107,7 +107,7 @@ nav {
 
 .short-info {
   height: 60px;
-  width: 110px;
+  width: 130px;
   display: inline-block;
   position: relative;
   margin: 0 auto;
@@ -148,7 +148,7 @@ nav {
 .info-container {
   margin: 0 auto;
   position: relative;
-  width: 224px;
+  width: 265px;
 }
 
 ul.a:not(.browser-default) > li {
