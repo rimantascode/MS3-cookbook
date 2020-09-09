@@ -11,6 +11,8 @@ footer {
 }
 */
 
+
+
 h3 {
     margin-bottom:40px!important;
 }
@@ -206,7 +208,7 @@ ul.a li {
 p.ingrediants-on-the-card {
   padding: 20px;
   text-justify: justify;
-  height: 100px;
+  height: 104px;
   overflow: hidden;
 }
 .buttons {
@@ -219,6 +221,36 @@ p.ingrediants-on-the-card {
  .z-depth-2 {
      border-top-left-radius: 34px;
  }
+ /* this part used from css-tricks.com */
+ .module {
+  margin: 0 0 1em 0;
+  overflow: hidden;
+}
+.module p {
+  margin: 0;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+}
+
+.fade {
+  position: relative;
+  height: 3.6em; 
+}
+/*end of css-tricks.com */
+.fade:after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 1.2em;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+}
 
 
 /* ------------------------------------------------ add button and share links ----- */
