@@ -1,5 +1,5 @@
 {%extends 'base.html'%}{%block content%}
-
+<!-- flashed messages-->
 <ul class="error">
 	<li>{{error}}</li>
 </ul>
@@ -10,6 +10,7 @@
 	{% endfor %}
 </ul>
 {% endif %} {% endwith %} {% block body %}{% endblock %}
+<!-- form-->
 <form action="{{ url_for('contact_us_form')}}" method="POST" class="col s12">
 	<div class="row">
 		<div class="input-field col s6">

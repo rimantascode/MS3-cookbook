@@ -1,4 +1,8 @@
-{% extends 'base.html'%} {% block content %} {{ pagination.info }}
+{% extends 'base.html'%}
+<!-- Recipes desplayd in the cards-->
+ {% block content %} 
+ <!--Pagination-->
+ {{ pagination.info }}
 <div class="pagination">{{ pagination.links|safe }}</div>
 {%for ingrediants in recipe %}
 <div class="ca">
@@ -7,12 +11,14 @@
 			<div class="z-depth-2">
 				<div class="row">
 					<div class="col m5 l5 card-image">
+                        <!-- Recipe picture-->
 						<div class="for-pic">
 							<img src="{{ingrediants.picture_url}}" class="round-image size responsive-img" />
                         </div>
 					</div>
 						<div class="col m7 l7 dd">
 							<div>
+                                <!-- the time When the recipe was added-->
 								<div class="last_update">
 									{%for a, b in added_latest.items() %} {%if a==ingrediants.date and b[0][1]=="new"%}
 									<div class="time">
@@ -24,6 +30,7 @@
 									</div>
 									{%endif%} {%endfor%}
 								</div>
+                                <!--Difficulty level and cooking time-->
 								<div class="info-window">
 									<h4 class="title">{{ingrediants.recipe_name}}</h4>
 									<div class="info-container">
@@ -50,6 +57,7 @@
 								</p>
 								<div class="transpe"></div>
 							</div>
+                            <!-- Edit, delete, see resipe buttons-->
 							<div class="buttons">
 								<a href="{{url_for('delete_recipe',recipes_id=ingrediants._id)}}"
 									class="waves-effect waves-light btn btn_small blue xx">DELETE</a>
@@ -65,5 +73,6 @@
 		</div>
 	</div>
 	{%endfor%}
+    <!--Pagination-->
 	<div class="pagination">{{ pagination.links|safe }}</div>
 	{%endblock%}

@@ -14,7 +14,7 @@
 
 <body>
 	<header>
-		<!--This NAVBAR is for the bigger screens-->
+		<!--THIS navigation is for the bigger screens-->
 		<nav>
 			<div class="nav-wrapper my-nav">
 				<a href="/index" class="brand-logo"><i class="material-icons prefix selects">home</i></a>
@@ -35,7 +35,7 @@
 				</ul>
 			</div>
 		</nav>
-		<!--This peace navbar peace is for smaller secreens -->
+		<!--This navigation peace is for smaller secreens -->
 		<ul class="sidenav" id="mobile-demo">
 			<li>
 				<a class="dropdown-trigger" href="/index/Poultry" data-target="dropdown2">POULTRY</a>
@@ -43,20 +43,26 @@
 			<li>
 				<a class="dropdown-trigger" href="/index/Red Meat" data-target="dropdown3">RED MEAT</a>
 			</li>
-			<li><a href="/index/Pork">PORK</a></li>
-			<li><a href="/index/Sea Food">SEA FOOD</a></li>
-			<li><a href="/index/Salad">SALAD</a></li>
+			<li>
+                <a href="/index/Pork">PORK</a>
+            </li>
+			<li>
+                <a href="/index/Sea Food">SEA FOOD</a>
+            </li>
+			<li>
+                <a href="/index/Salad">SALAD</a>
+            </li>
+			<li>
+				<a href="/index">ALL RECIPES</a>
+			</li>
 		</ul>
 	</header>
 	<main>
+    <!-- The dish block is dispayed when see recipe is clicked-->
 		{% block dish %}
-		<!-- The main picture area -->
 		<div class="col s12 container picture-area">
 			<img class="responsive-img" src="{{url_for('static',filename='images/102679650_cd10235c8f_k.jpg')}}" />
-            </div>
-
-			<!-- search results, those results will be the desplayd in this main page-->
-
+        </div>
 			<div class="col s12 container search-results">
 				<div class="col s12 search-result-bar">
 					<a href="{{url_for('add_recipe')}}"
@@ -74,8 +80,7 @@
 						</div>
 					</div>
 				</div>
-
-				<!-- search results -->
+				<!-- information is displayed what is going to be beneath -->
 				<div class="col s12 search-result-bar list-icon">
 					<h5>
 						<i class="fas fa-th-list"></i>
@@ -88,6 +93,7 @@
 			</div>
 			{% endblock %}
 	</main>
+    <!-- footer-->
 	<footer class="page-footer the-footer">
 		<div class="container">
 			<div class="row">
@@ -130,7 +136,7 @@
 		</div>
 		<div class="footer-copyright">
 			<div class="container">
-				© 2020 Copyrights reserved
+				© 2020 Copyrights reserved Rimantas 
 			</div>
 		</div>
 	</footer>
