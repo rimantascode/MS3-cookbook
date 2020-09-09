@@ -1,8 +1,11 @@
+# Milestone Project 3
+
+
 # Recipes Website
 
-Dynamic RECIPES WEBSITE with an interctive design which contains from fron-end and back-end giving the ability to add, edit, update, delete the recipes simply and easy, just filling the form, or modifyieng the form. It ueses mongoDB and written using Flask Micro Framework.
-Hosted on [Heroku](https://rimantascode.github.io/Milestone-Project-2/)
-Repository on [GitHub](https://github.com/rimantascode/Milestone-Project-2)
+Dynamic RECIPES WEBSITE with an interctive design which contains from fron-end and back-end giving the ability to add, edit, update, delete the recipes simply and easy, just filling the form, or modifyieng the form. It ueses mongoDB and written using Flask Micro Framework, HTML5, CSS3, jQuery, Javascript
+Hosted on [Heroku](https://cookbook-ms3.herokuapp.com/)
+Repository on [GitHub](https://github.com/rimantascode/MS3-cookbook)
 
 ## License
 
@@ -15,7 +18,20 @@ the Free Software Foundation, either version 3 of the License, or
 
 # UX
 
-![Responsive Views of Home Page](documents/responsiveness.png)
+![Responsive Views of Home Page](source/responsive.png)
+
+## The Aim.
+
+ - The main aim was to create the recipes website with clearly desplayed and  - easily diegstible information. 
+
+ - To create an easy menageble website with an functions such as add, edit and delete the recipes. 
+
+ - Let the users to filter the result by clicking the navigation category.
+
+ - Keep the recipes in sorted by the date when it was added so the users could see the newest recipes. 
+
+
+
 
 ## User Stories
 
@@ -34,28 +50,37 @@ The users also are able to edit the existing recipe by clickig edit button strai
 ## Design
 
 - The navigation was used from materialize website, as it functioning well on smaller devices and bigger screens.
-- The layout of the main page consist of the picture area, in landing page it displayes the general picture with a lot of recipes on the page. When the recipee is viewed than the appropriate picture takes the place. The design like this is consistant and the user do not need to learn how to use it. Down below is a float botton to add the recipe and on the appoiste side share button to allow the user share the recipe in the Social Media.
-- The next pannel has "Search Results", and this write uup channges in the name of the recipe, when the recipe is view in details. It keeps the information tidy for the user convieniance.
-- Down below the recipes are displayed in the cards as search results. First I designed to be displayed a bit differently, but when I was looking through the **https://materializecss.com/** My attention atracted the cards, and I wanted to her used to **materialzess** features desiced to take the apportunitya and redisign it in my way. Also I believe that the picture is worth hundred of words, the size it is displayed make a good cence of the dish, and even the user might even feel hungry. The card it self contains easy diegestible, and usefull information in first glance which might lever the dicision to click the particular recipe.
+- The layout of the main page consist of the picture area, in landing page it displayes the general picture with a lot of recipes on the page. When the recipee is viewed than the appropriate picture takes the place. The design like this is consistant and the user do not need to learn how to use it. Down below is a float botton to add the recipe and on the appoiste side share button to allow the user share the recipe/recipes in the Social Media.
+- The next pannel has displays the informamtion what is it going to be desplayed, and the title channges in the name of the recipe, when the recipe is view in details. It keeps the information tidy for the user convieniance.
+- Down below the recipes are displayed in the cards as search results. First I designed to be displayed a bit differently, but designed it as it is now, because I believe that the picture is worth hundred of words, the size it is displayed make a good cence of the dish. The card it self contains easy diegestible, and usefull information in first glance which might lever the dicision to click the particular recipe.
 - At the end of the page we have a footer with links to social media, about us page and contact us page.
 
-- **About Us** simple page with a picture and some text about the cocmpany.
-- **Contact Us** again the design of this page remains simple containing a form, and once it is filled up and meets the requirements can be submited and the user will get a feedback whether it was successfully sent or not.
+- **About Us** simple page with a picture and some text about the project.
+- **Contact Us** the design of this page remains simple containing a form, and once it is filled up and meets the requirements can be submited and the user will get a feedback whether it was successfully sent or not.
 
 * Colour scheme consists of few colours, was used website to blend the colors.
   ##############################################################################
   (https://meyerweb.com/eric/tools/color-blend/#:::hex)
   - ![#f7f7f7](https://placehold.it/15/f7f7f7/000000?text=+) `#f7f7f7`
-  - ![#29a5e2](https://placehold.it/15/29a5e2/000000?text=+) `#29a5e2`
+  - ![#964600](https://placehold.it/15/29a5e2/000000?text=+) `#964600`
   - ![#666666](https://placehold.it/15/666666/000000?text=+) `#666666`
   - ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) `#ffffff`
+  - ![#f5f5dc](https://placehold.it/15/ffffff/000000?text=+) `#f5f5dc`
+  - ![#ff9900](https://placehold.it/15/ffffff/000000?text=+) `#ff9900`
+  - ![red](https://placehold.it/15/ffffff/000000?text=+) `red`
+  - ![#edebeb](https://placehold.it/15/ffffff/000000?text=+) `#edebeb`
+  - ![black](https://placehold.it/15/ffffff/000000?text=+) `black`
+  - ![#008464 ](https://placehold.it/15/ffffff/000000?text=+) `#008464`
+  - ![#0761afb3](https://placehold.it/15/ffffff/000000?text=+) `#0761afb3`
+  - ![#ec373780](https://placehold.it/15/ffffff/000000?text=+) `#ec373780`
+  - ![#6aa6ed](https://placehold.it/15/ffffff/000000?text=+) `#6aa6ed`
+
 
 ## Typography
 
-##############################################
-
 - fonts used throughout the website
-  - font-family: 'Oswald', sans-serif;
+font-family: "Permanent Marker", cursive
+font-family: "Roboto", sans-serif
 
 ### Mockups
 
@@ -86,6 +111,7 @@ Features planned, implemented and outlined for later development
 ### Existing Features
 
 - Documentation - ReadMe File, Licence & Mockups
+- Displayes the period of time when the recipe was added
 - Colour Scheme
 - materializecss - HTML, CSS Framework
   - Grid System - Columns and Rows
@@ -101,7 +127,7 @@ Features planned, implemented and outlined for later development
 - Authentication
 - custom logo
 
-## Technologies Used
+## Technologies Used 
 
 This project makes use of:
 
@@ -131,33 +157,25 @@ This project makes use of:
   - Testing responsiveness of the website **Am I Responsive**
 - [Figma](https://www.figma.com/)
   - used to make a mockup
+- All the labraries including the flask micro Framework have to installed. All of them ish listed in the requirements.txt, how to install please Deployment section.
 
-## Testing
 
 ### Manual Testing
 
-- The first part of the page website choose your journey.
-
-  1.  Hover over it has to apply the showdown underneath, by giving clear separation the section, all three sections behave that way.
-  2.  click on hovered over a section, it will take to the map section and the markers will be dropped on the map accordingly. All. three sections behave the same.
-
-- The second part is a map.
-
-1 If the selection was not selected in choose your journey the map will load automatically Kingston with hotels. click on radio buttons and the map will be displaying selected city, also if you will click on Choose The Place "Restaurants", "Hotels", "Beaches" the markers will be displayed accordingly. If you will click on the marker the info window will appear with the information about the place, some places will display how much time left until it closes, if it is closed, the day when it will be open again will be displayed. Some of the places have not provided the relevant information so will be displayed some of information such as picture, place name, rating, phone number address, or "open/close time is not specified might appear on the window".
-The information accuracy was tested by sending website links to my friend living in different countries no matter what country the information was displayed correctly, we could see the same closing in time or is closed or open.
-
-- The third part is about us a brief description of the service.
-
-- The third part id contacts us.
-
-1. If you will try to submit the form by missing any of the inputs, a message will be displayed, telling what section has to be filled in, it also checks the inputted email address to make sure it has the "@" symbol.
-2. Click submit, than the owner will recieve an email with all the details inputted, also "SUCCESS! 200 OK" will be logged out in th console telling the email was sent successfully. The email is sent by using Emailjs service.
-
-- Fifth is a footer containing social links all of them opens in a new tab and are working, tested manually.
+- All the links work, tested by clicking manualy. 
+- add button works, it once clicked it takes to Add Recipe page. 
+- share links all works it is easy to share the website. 
+- pagianton works, it desplays 4 recipes per page.
+- The feature the time of period when the recipe was added works, and tested by adding a new recipe. 
+- DELETE, EDIT, SEE buttons work and the card, tested manualy at takes to the correct page.
+- links in footer work, takes to the correct pages.
 
 ### Code Validation
 
-To validate the my CSS and HTML code I used [https://validator.w3.org/](https://validator.w3.org/)
+To validate the my CSS and HTML code I used [https://validator.w3.org/](https://validator.w3.org/) 
+
+To validate the PYTHON3 code [http://pep8online.com/ch/eckresult](http://pep8online.com/ch/eckresult) 
+
 
 ### Testing on Browsers
 
@@ -168,8 +186,6 @@ Tested on Google Chrome, Opera, Mozzilla firefox. No issues.
 Used Google Chrome, Opera, Mozila firefox browser to test the responsiveness, it flows good on any type of device.
 
 ## Deployment
-
-The project is hosted on [GitHub Pages](https://rimantascode.github.io/Milestone-Project-2/)
 
 The process involved:
 
@@ -182,11 +198,13 @@ The process involved:
 To deploy your own version of the website:
 
 - Have git installed
-- Visit the [repository](https://github.com/rimantascode/Milestone-Project-2)
+- Visit the [repository](https://github.com/rimantascode/MS3-cookbook)
 - Click 'Clone or download' and copy the code for http
 - Open a terminal in your root directory
 - Type 'git clone ' followed by the code taken from github repository
-  - `https://github.com/rimantascode/Milestone-Project-2.git`
+- `git@github.com:rimantascode/MS3-cookbook.git`
+- You will need to install requirements.txt by typing in the terminal pip3 install -r requirements.txt
+
 - When this completes you have your own version of the website
   - Feel free to make any changes to it
 - The website can be run by opening one of the HTML files within a web browser
@@ -202,17 +220,6 @@ It may take a moment for changes to appear on the hosted website.
 
 ### Media
 
-#### Thank you very much for all the source of high-quality quality pictures.
-
-- Thank you [https://fshoq.com](https://fshoq.com/free-photos/p/167/woman-on-swing-caribbean-beach-and-sea) for a picture
-- Thank you [www.pxfuel.com](https://www.pxfuel.com/en/free-photo-jlzhv) for a picture
-- Thank you[https://pixabay.com/](https://pixabay.com/photos/jamaica-palm-trees-beach-1303880/) for a picture
-- Thank you [https://pixabay.com/](https://pixabay.com/photos/woman-hike-lake-female-hiker-2896389/) for a picture
-- Thank you [https://wikimedia.org/](https://upload.wikimedia.org/) even ehen the picture is no availble any more
-- Thank you [https://www.flickr.com/](https://www.flickr.com/photos/bods/6062033422) for a picture.
-- Thank you [https://commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:The_Sognefjord.jpg) for a picture
-- Thank you [https://www.flickr.com/](https://www.flickr.com/photos/paszczak000/4669043022) for a picture
-- Thank you [https://www.flickr.com/](https://www.flickr.com/photos/redjunasun/5937648493) for a picture
 
 ### Acknowledgements
 
