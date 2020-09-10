@@ -1,38 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-/*
-font-family: "Permanent Marker", cursive;
-font-family: "Roboto", sans-serif;
-*/
-/*
-footer {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
-*/
-
-
-
+  @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 h3 {
-    margin-bottom:40px!important;
+  margin-bottom: 40px!important;
 }
+
+
 /* ------------------------------------------------ NAV BAR ----- */
+
 nav {
   position: fixed;
   z-index: 5;
 }
+
 .my-nav {
   background-color: #964600;
   text-align: center;
 }
+
 .brand-logo {
   position: absolute;
   left: 20px;
 }
+
 .centered {
   justify-content: center;
   display: flex;
 }
+
 .nav-links {
   max-width: 15%;
   background-color: #964600;
@@ -40,18 +33,16 @@ nav {
   color: #f7f7f7;
   letter-spacing: 1px;
 }
+
 .nav-link-for-dropdown {
   width: auto;
   font-family: "Permanent Marker", cursive;
   color: #f7f7f7;
   letter-spacing: 1px;
 }
+
 /* ------------------------------------------------ main picture area ----- */
-.picture-area {
-}
-.picture-area-dish {
-  background-color: none;
-}
+
 .picture-area img {
   display: block;
   margin: auto;
@@ -61,14 +52,14 @@ nav {
 }
 
 /* ------------------------------------------------ home page and search results  ----- */
-.search-results {
-}
+
 .search-result-bar {
   border-bottom: 1px solid #666666;
   height: 56px;
   background-color: #f5f5dc;
   position: relative;
 }
+
 .search-result-bar-dish {
   border-bottom: 1px solid #666666;
   height: 56px;
@@ -93,15 +84,18 @@ nav {
 .last_update {
   padding: 10px;
 }
-.ca > .row {
+
+.ca>.row {
   margin: 0 !important;
   padding: 0 !important;
 }
+
 .card.horizontal {
   border-radius: 30px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
+
 .round-image {
   border-top-left-radius: 30px !important;
   border-bottom-left-radius: 0px !important;
@@ -116,6 +110,7 @@ nav {
   margin: 0 auto;
   padding: 0;
 }
+
 .circles {
   height: 40px;
   width: 40px;
@@ -125,15 +120,18 @@ nav {
   text-align: center;
   vertical-align: middle;
 }
+
 .circles i {
   font-size: 34px;
   color: #f7f7f7;
   margin: 0 auto;
   padding: 0;
 }
+
 .circles p {
   font-size: 2px;
 }
+
 .data {
   font-size: 20px;
   width: 30px;
@@ -141,52 +139,59 @@ nav {
   float: left;
   padding: 5px;
 }
+
 .title {
   text-align: center;
   margin-top: 48px;
   font-size: 2rem;
-
   overflow: hidden;
 }
+
 .info-container {
   margin: 0 auto;
   position: relative;
   width: 265px;
 }
 
-ul.a:not(.browser-default) > li {
+ul.a:not(.browser-default)>li {
   text-align: justify;
   align-content: center;
-
   height: 100px;
   overflow: hidden;
 }
+
 ul.a:not(.browser-default) {
   padding: 2px 20px 4px 2px !important;
 }
+
 ul.a li {
   line-height: 15px;
 }
+
 .size {
   height: 450px !important;
   object-fit: cover;
   width: 350px;
 }
+
 .btn,
 .btn-large,
 .btn-small {
   margin-bottom: 10px !important;
 }
+
 .time {
   float: right;
   margin-right: 15px;
   padding-top: 0px;
 }
+
 .ago-time-hot {
   font-size: 20px;
   color: red;
   margin-top: 3px;
 }
+
 .ago-time-hot i {
   font-size: 25px;
 }
@@ -195,14 +200,17 @@ ul.a li {
   font-size: 20px;
   color: green;
 }
+
 .for-pic {
   margin-top: 7px;
   margin-left: 7px;
-  margin-bottom:2px;
+  margin-bottom: 2px;
 }
+
 .card.horizontal .card-image img {
   width: 350px !important;
 }
+
 .card-content {
   padding-bottom: 7px !important;
   height: 333px !important;
@@ -210,38 +218,38 @@ ul.a li {
 
 p.ingrediants-on-the-card {
   padding: 20px;
-  text-justify: justify;
+  text-align:justify;
   height: 104px;
   overflow: hidden;
 }
+
 .buttons {
   margin: 0 auto;
   max-width: 323px;
 }
+
 .buttons a {
   width: 105px;
 }
- .z-depth-2 {
-     border-top-left-radius: 34px;
- }
- /* this part used from css-tricks.com */
- .module {
+
+.z-depth-2 {
+  border-top-left-radius: 34px;
+}
+
+/* this part used from css-tricks.com */
+
+.module {
   margin: 0 0 1em 0;
   overflow: hidden;
 }
+
 .module p {
   margin: 0;
 }
 
-.line-clamp {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;  
-}
-
 .fade {
   position: relative;
-  height: 3.6em; 
+  height: 3.6em;
 }
 
 .fade:after {
@@ -254,62 +262,61 @@ p.ingrediants-on-the-card {
   height: 1.2em;
   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
 }
- /*end of css-tricks.com */
 
+/*end of css-tricks.com */
 
 /* ------------------------------------------------ add button and share links ----- */
+
 .add-button {
   vertical-align: middle;
   margin-top: 7px;
   margin-left: 10px;
 }
+
 .share {
   float: right;
   display: flex;
   height: 56px;
   margin-right: 25px;
 }
+
 .share-div {
   width: 100px;
   position: relative;
   height: 56px;
 }
+
 .share-div h4 {
   font-family: "Permanent Marker", sans-serif;
   color: #bdbcbc;
   line-height: 56px;
 }
+
 .share-links-container {
   float: left;
   position: relative;
   height: 56px;
 }
+
 .share h4 {
   display: inline;
 }
-/*
-.circle-around-social-links {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: inline-block;
-  background-color: #ff9900;
-  border: 2px solid #ffffff;
-  margin-top: 10px;
-}
-*/
+
 .circle-around-social-links a {
   background-color: #ff9900;
   border: 2px solid #ffffff !important;
   color: #f7f7f7 !important;
 }
+
 ul.share-links li {
   display: inline-block;
   line-height: 56px;
 }
+
 ul.share-links {
   margin: 0;
 }
+
 .share-links i {
   letter-spacing: 25px;
   font-size: 24px;
@@ -317,34 +324,42 @@ ul.share-links {
   padding-left: 5px;
   color: #edebeb;
 }
+
 .card-stacked {
   float: right !important;
 }
+
 .card-stacked a {
   z-index: 0;
 }
+
 .dd {
   float: right;
   width: 100%;
 }
 
+
 /* ------------------------------------------------ list icon----- */
+
 .list-icon {
   background-color: #f7f7f7;
   margin-bottom: 15px;
 }
+
 .list-icon h5 {
   margin: 0;
   line-height: 56px;
   text-align: center;
   font-size: 1.2rem;
 }
+
 .list-icon-dish h5 {
   margin: 0;
   /*line-height:56px;*/
   text-align: center;
   font-size: 1.2rem;
 }
+
 .list-icon h5 span {
   font-family: "Permanent Marker", cursive;
   padding-left: 10px;
@@ -352,14 +367,19 @@ ul.share-links {
   font-weight: 800;
   color: #666666;
 }
+
+
 /* ------------------------------------------------ dish.html----- */
+
 .recipe-details {
   margin-bottom: 15px;
 }
+
 .ingrediants-required {
   margin: 0;
   padding: 0;
 }
+
 .ingrediants {
   border: 1px solid black;
   border-radius: 15px;
@@ -367,9 +387,11 @@ ul.share-links {
   padding-left: 0;
   padding-right: 0px;
 }
+
 .ingrediants h5 {
   text-align: center;
 }
+
 li.order {
   list-style-type: none !important;
   font-family: "Times New Roman", Times, serif;
@@ -380,46 +402,57 @@ li.order {
   border-radius: 13px;
   text-align: center;
 }
+
 .description {
   border: 1px solid black;
   border-radius: 15px;
   background-color: #f5f5dc;
 }
+
 .description h5 {
   text-align: center;
 }
+
 .description p {
   margin: 10px;
 }
 
+
 /* ------------------------------------------------ add-recipe.html form----- */
+
 .txt-area {
   height: 70px !important;
 }
+
 .txt-area:focus {
   outline: none !important;
   border-color: #008464 !important;
   height: 100px !important;
 }
+
 select {
   margin-left: 45px !important;
-  width: 88% !important;
 }
 
 .selects {
   position: absolute;
 }
+
 #count {
   margin-left: 40px;
 }
+
 .for-select-label {
-    margin-top:-40px;
+  margin-top: -40px;
 }
 
+
 /* ------------------------------------------------ Footer----- */
+
 .the-footer {
   background-color: #964600 !important;
 }
+
 .social-footer-links i {
   letter-spacing: 25px;
   font-size: 24px;
@@ -442,6 +475,7 @@ select {
 .footer-links {
   padding-bottom: 8px;
 }
+
 .footer-links a {
   font-size: 16px !important;
 }
@@ -455,18 +489,31 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+
 /* ------------------------------------------------ about_us.html----- */
+
 .center-heading {
   text-align: center;
 }
+
+
 /* ------------------------------------------------ contact_us.html----- */
+
+select {
+  width: 94%!important;
+}
+
+
 /* ------------------------------------------------ flashed messages----- */
+
 .flashes {
   border: 1px solid green;
   font-size: 14px;
   color: #f7f7f7;
   background-color: #0761afb3;
 }
+
 .error {
   font-size: 14px;
   color: #f7f7f7;
@@ -474,6 +521,7 @@ main {
 }
 
 /* ------------------------------------------------ pagination----- */
+
 .pagination-page-info {
   padding: 0.6em;
   padding-left: 0;
@@ -481,6 +529,7 @@ main {
   margin-left: 0;
   font-size: 12px;
 }
+
 .pagination-page-info b {
   color: black;
   background: #6aa6ed;
@@ -488,6 +537,7 @@ main {
   padding: 0.1em 0.25em;
   font-size: 150%;
 }
+
 .pagination {
   display: flex;
   align-items: center;
@@ -506,13 +556,10 @@ main {
     width: 100% !important;
   }
   .card-image {
-    max-width: 100% !important ;
+    max-width: 100% !important;
     max-height: 250px !important;
     object-fit: cover;
     width: 100% !important;
-  }
-  .ca {
-    /* height: 800px !important;*/
   }
   .search-results-list {
     max-height: 800px !important;
@@ -531,14 +578,14 @@ main {
     margin-top: 48px;
     font-size: 1.2rem;
   }
-  ul.a:not(.browser-default) > li {
+  ul.a:not(.browser-default)>li {
     text-align: justify;
     align-content: center;
   }
   .for-pic {
     border-top-left-radius: 30px !important;
     border-top-right-radius: 30px !important;
-    margin:0;
+    margin: 0;
   }
   .buttons {
     max-width: 100%;
@@ -549,12 +596,13 @@ main {
   .z-depth-2 {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+  }
 }
-@media only screen and (max-width: 851px) {
-}
-ul.a:not(.browser-default) > li {
-  text-align: justify;
-  align-content: center;
-  height: 60px;
-  overflow: hidden;
+  @media only screen and (max-width: 851px) {
+  ul.a:not(.browser-default)>li {
+    text-align: justify;
+    align-content: center;
+    height: 60px;
+    overflow: hidden;
+  }
 }
