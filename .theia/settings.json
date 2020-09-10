@@ -17,5 +17,6 @@
       "**/.theia": true,
    },
 "emmet.extensionsPath": ".theia",
-"editor.formatOnSave": false
+"editor.formatOnSave": false,
+"cornflakes.linter.run": "off"
 }
