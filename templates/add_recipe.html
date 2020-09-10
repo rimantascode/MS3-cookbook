@@ -2,84 +2,84 @@
 <!-- Add Recipe-->
 <h3>Add Recipe</h3>
 <div class="row">
-	<form action="{{ url_for('insert_recipe')}}" method="POST" class="col s12">
-		<div class="row">
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="material-icons prefix selects">build</i>
-					<label class="for-select-label" for="difficulty_level" >Difficulty level</label>
-					<select id="difficulty_level" name="difficulty_level" class="browser-default" required>
+    <form action="{{ url_for('insert_recipe')}}" method="POST" class="col s12">
+        <div class="row">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix selects">build</i>
+                    <label class="for-select-label" for="difficulty_level" >Difficulty level</label>
+                    <select id="difficulty_level" name="difficulty_level" class="browser-default" required>
                         <option value="" disabled selected required>Select The Difficulty Level</option>
                         {%for level in levels %}
                         <option value="{{level.difficulty_level}}" required>{{level.difficulty_level.capitalize()}}</option>
                         {%endfor%}
                     </select>
-				</div>
-			</div>
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="material-icons prefix selects">sort</i>
-					<label class="for-select-label" for="Category" >Category</label>
-					<select id="category" name="category" class="browser-default" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix selects">sort</i>
+                    <label class="for-select-label" for="Category" >Category</label>
+                    <select id="category" name="category" class="browser-default" required>
                         <option value="" disabled selected>Select category</option>
                         {%for cat in categoriess %}
                         <option value="{{cat.name}}">{{cat.name}}</option>
                         {%endfor%}
                     </select>
-				</div>
-			</div>
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="material-icons prefix selects">timer</i>
-					<label class="for-select-label" for="prep-time" >Cooking Time </label>
-					<select id="prep-time" name="prep_time" class="browser-default" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix selects">timer</i>
+                    <label class="for-select-label" for="prep-time" >Cooking Time </label>
+                    <select id="prep-time" name="prep_time" class="browser-default" required>
                         <option value="" disabled selected> Select Cooking Time </option>
                         {%for t in time %}
                         <option value="{{t.time}}">{{t.time}}</option>
                         {%endfor%}
                     </select>
-				</div>
-			</div>
-			<div class="input-field col s12">
-				<i class="material-icons prefix">assignment</i>
-				<label for="recipe_name">Recipe Name</label>
-				<input id="recipe_name" name="recipe_name" type="text" placeholder="Chicken Salad" required />
-				<span id="count"></span>
-			</div>
-		</div>
-		<div class="row">
-			<div class="input-field col s12">
-				<i class="material-icons prefix">blur_on</i>
-				<textarea name="ingrediants" id="ingrediants" class="materialize-textarea txt-area" data-length="120" placeholder="Chicken 200g, Potatoes 6 pieces, 3 Carrots" required></textarea>
-				<label for="ingrediants">Ingrediants</label>
-			</div>
-		</div>
-		<div class="row">
-			<div class="input-field col s12">
-				<i class="material-icons prefix">subject</i>
-				<textarea
+                </div>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">assignment</i>
+                <label for="recipe_name">Recipe Name</label>
+                <input id="recipe_name" name="recipe_name" type="text" placeholder="Chicken Salad" required />
+                <span id="count"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">blur_on</i>
+                <textarea name="ingrediants" id="ingrediants" class="materialize-textarea txt-area" data-length="120" placeholder="Chicken 200g, Potatoes 6 pieces, 3 Carrots" required></textarea>
+                <label for="ingrediants">Ingrediants</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">subject</i>
+                <textarea
                     name="cooking_description"
                     id="cooking_description"
                     class="materialize-textarea txt-area"
                     placeholder="1. Slice chichen in 1cm square pieces and pu aside. 2. Take the carrots and slice in 0.5 cm pieces"
                     required
                     ></textarea>
-				<label for="cooking_description"> Recipe Coking Instructions</label>
-			</div>
-		</div>
-		<div class="row">
-			<div class="input-field col s12">
-				<i class="material-icons prefix">photo</i>
-				<input id="picture_url" name="picture_url" type="text" placeholder="https://c.ndtvimg.com/2019-09/7gqbduk8_paneer-steak_625x300_26_September_19.jpg" required />
-				<label for="picture_url">Place picture URL</label>
-			</div>
-		</div>
-		<div class="row">
-			<button class="btn waves-effect waves-light" type="submit" id="add_recipe" name="action">
+                <label for="cooking_description"> Recipe Coking Instructions</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">photo</i>
+                <input id="picture_url" name="picture_url" type="text" placeholder="https://c.ndtvimg.com/2019-09/7gqbduk8_paneer-steak_625x300_26_September_19.jpg" required />
+                <label for="picture_url">Place picture URL</label>
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" id="add_recipe" name="action">
             Add Recipe
             <i class="material-icons right">playlist_add</i>
             </button>
-		</div>
-	</form>
+        </div>
+    </form>
 </div>
 {% endblock %}
