@@ -1,4 +1,5 @@
-$('#b4').click(function (event) {
+$(document).ready(function(){
+$('.b4').click(function (event) {
     event.preventDefault();
     swal({
         title: "Are you sure?",
@@ -16,4 +17,5 @@ $('#b4').click(function (event) {
                 swal("Your recipe is safe!");
             }     
         });
+    });
 });
