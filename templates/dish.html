@@ -8,32 +8,31 @@
 	<!-- search results, those results will be the desplayd in this main page-->
 	<div class="col s12 container search-results">
 		<div class="col s12 search-result-bar">
-            <!-- float botton with delete, add and edit recipe options-->
+			<!-- float botton with delete, add and edit recipe options-->
 			<div class="fixed-action-btn btn-manage">
 				<a class="btn-floating btn-large red">
 					<i class="large material-icons">mode_edit</i>
 				</a>
 				<ul>
 					<li>
-                    <button>
-						<a href="{{url_for('delete_recipe',recipes_id=recipes._id)}}"
-							class="btn-floating red"><i class="material-icons">delete_forever</i>
-                        </a>
-                        </button>
+						<button>
+                    <a href="{{url_for('delete_recipe',recipes_id=recipes._id)}}"
+                        class="btn-floating red"><i class="material-icons">delete_forever</i>
+                    </a>
+                    </button>
 					</li>
 					<li>
 						<a href="{{url_for('edit_recipe',recipes_id=recipes._id)}}"
 							class="btn-floating yellow darken-1"><i class="material-icons">mode_edit</i>
-                        </a>
+						</a>
 					</li>
 					<li>
 						<a href="{{url_for('add_recipe')}}"
 							class="btn-floating green"><i class="material-icons">playlist_add</i>
-                        </a>
+						</a>
 					</li>
 				</ul>
 			</div>
-
 			<div class="share">
 				<div class="share-div">
 					<h4>Share</h4>
@@ -50,9 +49,9 @@
 		<!-- desplayed the ingrediants required and method/description of cooking -->
 		<div class="col s12 search-result-bar-dish list-icon-dish">
 			<h5>
-                <i class="material-icons">done</i>
-                <span>{{recipes.recipe_name}}</span>
-            </h5>
+				<i class="material-icons">done</i>
+				<span>{{recipes.recipe_name}}</span>
+			</h5>
 		</div>
 	</div>
 	<div class="container">

@@ -77,3 +77,12 @@
 	{%endfor%}
 	<div class="pagination">{{ pagination.links|safe }}</div>
 	{%endblock%}
+
+	action="{{ url_for('contact_us_form')}}"
+
+	onsubmit="return sendEmail(this);"
+
+	<script src="{{url_for('static', filename='js/emailjs.js')}}"></script>
+	<script src="{{url_for('static', filename='js/count_letters.js')}}"></script>
+	<script src="{{url_for('static', filename='js/from_materializecss.js')}}"></script>
+	<script src="{{url_for('static', filename='js/sweet_alert.js')}}"></script>

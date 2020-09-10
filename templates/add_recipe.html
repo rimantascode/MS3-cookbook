@@ -7,7 +7,7 @@
 			<div class="row">
 				<div class="input-field col s12">
 					<i class="material-icons prefix selects">build</i>
-                    <label class="for-select-label" for="difficulty_level" >Difficulty level</label>
+					<label class="for-select-label" for="difficulty_level" >Difficulty level</label>
 					<select id="difficulty_level" name="difficulty_level" class="browser-default" required>
                         <option value="" disabled selected required>Select The Difficulty Level</option>
                         {%for level in levels %}
@@ -63,11 +63,10 @@
                     class="materialize-textarea txt-area"
                     placeholder="1. Slice chichen in 1cm square pieces and pu aside. 2. Take the carrots and slice in 0.5 cm pieces"
                     required
-                ></textarea>
+                    ></textarea>
 				<label for="cooking_description"> Recipe Coking Instructions</label>
 			</div>
 		</div>
-
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">photo</i>
@@ -77,11 +76,10 @@
 		</div>
 		<div class="row">
 			<button class="btn waves-effect waves-light" type="submit" id="add_recipe" name="action">
-                Add Recipe
-                <i class="material-icons right">playlist_add</i>
+            Add Recipe
+            <i class="material-icons right">playlist_add</i>
             </button>
 		</div>
 	</form>
 </div>
-
 {% endblock %}

@@ -1,4 +1,5 @@
 {%extends 'base.html'%}{%block content%}
+<div id="response-to-email"></div>
 <!-- flashed messages-->
 <ul class="error">
 	<li>{{error}}</li>
@@ -11,7 +12,7 @@
 </ul>
 {% endif %} {% endwith %} {% block body %}{% endblock %}
 <!-- form-->
-<form action="{{ url_for('contact_us_form')}}" method="POST" class="col s12">
+<form action="{{url_for('contact_us_form')}}" method="POST" onsubmit="return sendEmail(this);" class="col s12">
 	<div class="row">
 		<div class="input-field col s6">
 			<input type="text" class="validate" name="first_name" id="first_name" required />
@@ -26,19 +27,19 @@
 	</div>
 	<div class="row">
 		<div class="input-field col s12">
-			<input id="email" type="email" class="validate" required />
+			<input id="email" type="email" class="validate" name="email" required />
 			<label for="email">Email</label>
 		</div>
 	</div>
 	<div class="row">
 		<div class="input-field col s12">
-			<textarea id="message" class="materialize-textarea" data-length="120" required></textarea>
+			<textarea id="message" name = "message" class="materialize-textarea" data-length="120" required></textarea>
 			<label for="message">Message</label>
 		</div>
 	</div>
 	<div class="row">
 		<button class="btn waves-effect waves-light" type="submit" name="action">Submit
-            <i class="material-icons right">send</i>
+        <i class="material-icons right">send</i>
         </button>
 	</div>
 </form>

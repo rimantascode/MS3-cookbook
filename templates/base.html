@@ -10,24 +10,29 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css"/>
-  
+	<link rel="stylesheet" href="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function(){
+                 emailjs.init("user_fT8QASrIT5GkBWUYFB8VD");
+              })();
+	</script>
 	<title>MS3 Recipe Web</title>
 </head>
 
 <body>
 	<header>
-		<!--THIS navigation is for the bigger screens-->
+		<!--This navigation is for the bigger screens-->
 		<nav>
 			<div class="nav-wrapper my-nav">
 				<a href="/index" class="brand-logo"><i class="material-icons prefix selects">home</i></a>
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 				<ul class="centered hide-on-med-and-down">
-					<li class="nav-links dropdown-trigger">
+					<li class="nav-links">
 						<a href="/index/Poultry">POULTRY</a>
 					</li>
 					<li class="nav-links">
-						<a class="dropdown-trigger" href="/index/Red Meat">RED MEAT</a>
+						<a href="/index/Red Meat">RED MEAT</a>
 					</li>
 					<li class="nav-links"><a href="/index/Pork">PORK</a></li>
 					<li class="nav-links"><a href="/index/Sea Food">SEA FOOD</a></li>
@@ -41,31 +46,31 @@
 		<!--This navigation peace is for smaller secreens -->
 		<ul class="sidenav" id="mobile-demo">
 			<li>
-				<a class="dropdown-trigger" href="/index/Poultry" data-target="dropdown2">POULTRY</a>
+				<a href="/index/Poultry">POULTRY</a>
 			</li>
 			<li>
-				<a class="dropdown-trigger" href="/index/Red Meat" data-target="dropdown3">RED MEAT</a>
+				<a href="/index/Red Meat">RED MEAT</a>
 			</li>
 			<li>
-                <a href="/index/Pork">PORK</a>
-            </li>
+				<a href="/index/Pork">PORK</a>
+			</li>
 			<li>
-                <a href="/index/Sea Food">SEA FOOD</a>
-            </li>
+				<a href="/index/Sea Food">SEA FOOD</a>
+			</li>
 			<li>
-                <a href="/index/Salad">SALAD</a>
-            </li>
+				<a href="/index/Salad">SALAD</a>
+			</li>
 			<li>
 				<a href="/index">ALL RECIPES</a>
 			</li>
 		</ul>
 	</header>
 	<main>
-    <!-- The dish block is dispayed when see recipe is clicked-->
+		<!-- The dish block is dispayed when see recipe is clicked-->
 		{% block dish %}
 		<div class="col s12 container picture-area">
 			<img class="responsive-img" src="{{url_for('static',filename='images/102679650_cd10235c8f_k.jpg')}}" />
-        </div>
+            </div>
 			<div class="col s12 container search-results">
 				<div class="col s12 search-result-bar">
 					<a href="{{url_for('add_recipe')}}"
@@ -95,14 +100,14 @@
 			</div>
 			{% endblock %}
 	</main>
-    <!-- footer-->
+	<!-- footer-->
 	<footer class="page-footer the-footer">
 		<div class="container">
 			<div class="row">
 				<div class="col l6 s12">
 					<h5 class="white-text"></h5>
 					<p class="grey-text text-lighten-4">
-						Enjoy the recipes add. If you have any questions feel free to contact Us.
+						Enjoy the recipes add. If you have any questions feel free to contact Us.
 					</p>
 				</div>
 				<div class="col l4 offset-l2 s12">
@@ -138,70 +143,14 @@
 		</div>
 		<div class="footer-copyright">
 			<div class="container">
-				© 2020 Rimantas 
+				© 2020 Rimantas
 			</div>
 		</div>
 	</footer>
-
-	<script>
-		var val;
-            var z;
-            $(document).ready(function () {
-                $(".sidenav").sidenav();
-                $(".dropdown-trigger").dropdown();
-                $("select").formSelect();
-                $("textarea#message").characterCounter();
-            });
-            document.addEventListener("DOMContentLoaded", function () {
-                var elems = document.querySelectorAll(".fixed-action-btn");
-                var instances = M.FloatingActionButton.init(elems, {
-                    direction: "up",
-                    hoverEnabled: false,
-                });
-            });
-            $("#recipe_name").keyup(function () {
-                val = $("#recipe_name").val();
-                var x = val.length;
-                z = 20 - x;
-
-                if (z >= 0) {
-                    $("#add_recipe").prop("disabled", true);
-                    $("#update").prop("disabled", true);
-                    $("#count")
-                        .css({ color: "red" })
-                        .text("Characters left " + z)
-                        .show(1000);
-                } else {
-                    $("#add_recipe").prop("disabled", false);
-                    $("#update").prop("disabled", false);
-
-                    $("#count").css({ color: "green" }).text("Thank You ").hide(1000);
-                }
-            });
-	
-      
-			$('#b4').click(function(event) {
-			event.preventDefault();
-			swal({
-			title: "Are you sure?",
-			text: "Once deleted, you will not be able to recover the recipe!",
-			icon: "warning",
-			buttons: true,
-			dangerMode: true,
-			})
-			.then((willDelete) => {
-			if (willDelete) {
-			swal("Your recipe has been deleted!", {
-			icon: "success",
-            });
-				window.location = $(this).attr('href');
-			} else {
-			swal("Your recipe is safe!");
-			}
-			});
-            });
-           
-	</script>
+	<script src="{{url_for('static', filename='js/emailjs.js')}}"></script>
+	<script src="{{url_for('static', filename='js/count_letters.js')}}"></script>
+	<script src="{{url_for('static', filename='js/from_materializecss.js')}}"></script>
+	<script src="{{url_for('static', filename='js/sweet_alert.js')}}"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 

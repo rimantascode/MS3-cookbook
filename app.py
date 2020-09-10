@@ -197,7 +197,7 @@ def contact_us_form():
         if request.form['first_name'] == '':
             error = 'You have to provide your name'
         else:
-            flash('{}, Success! Thank you for contacting us.'.format(request.form['first_name']))
+            flash('{}, thank you for contacting us. Now Please check you email. '.format(request.form['first_name']))
             return redirect(url_for('contact_us'))
     return render_template('contact_us.html', error=error)
 
