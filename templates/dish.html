@@ -1,77 +1,77 @@
 {% extends 'base.html'%} {% block dish %}
 <!-- The main picture area -->
 <div class="col s12 container picture-area picture-area-dish">
-	{% for images in image %} {% if images.picture_url==recipes.picture_url%}
-	<img class="responsive-img" src="{{recipes.picture_url}}" />
+    {% for images in image %} {% if images.picture_url==recipes.picture_url%}
+    <img class="responsive-img" src="{{recipes.picture_url}}" />
     {%endif%} {%endfor%}
 </div>
-	<!-- search results, those results will be the desplayd in this main page-->
-	<div class="col s12 container search-results">
-		<div class="col s12 search-result-bar">
-			<!-- float botton with delete, add and edit recipe options-->
-			<div class="fixed-action-btn btn-manage">
-				<a class="btn-floating btn-large red">
-					<i class="large material-icons">mode_edit</i>
-				</a>
-				<ul>
-					<li>
-						<button>
+<!-- search results, those results will be the desplayd in this main page-->
+<div class="col s12 container search-results">
+    <div class="col s12 search-result-bar">
+        <!-- float botton with delete, add and edit recipe options-->
+        <div class="fixed-action-btn btn-manage">
+            <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+            </a>
+            <ul>
+                <li>
+                    <button>
                     <a href="{{url_for('delete_recipe',recipes_id=recipes._id)}}"
                         class="btn-floating red"><i class="material-icons">delete_forever</i>
                     </a>
                     </button>
-					</li>
-					<li>
-						<a href="{{url_for('edit_recipe',recipes_id=recipes._id)}}"
-							class="btn-floating yellow darken-1"><i class="material-icons">mode_edit</i>
-						</a>
-					</li>
-					<li>
-						<a href="{{url_for('add_recipe')}}"
-							class="btn-floating green"><i class="material-icons">playlist_add</i>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="share">
-				<div class="share-div">
-					<h4>Share</h4>
-				</div>
-				<div class="share-links-container">
-					<ul class="share-links">
-						<li>
-							{{ share.create( sites='facebook, twitter,linkedin', mobile_sites='facebook, twitter,linkedin',addition_class='circle-around-social-links a' ) }}{{share.load() }}
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- desplayed the ingrediants required and method/description of cooking -->
-		<div class="col s12 search-result-bar-dish list-icon-dish">
-			<h5>
-				<i class="material-icons">done</i>
-				<span>{{recipes.recipe_name}}</span>
-			</h5>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col s12 m5 ingrediants-required">
-				<div class="ingrediants">
-					<h5>Ingrediants</h5>
-					<ul>
-						{%for i in a%}
-						<li class="order">{{i}}</li>
-						{%endfor%}
-					</ul>
-				</div>
-			</div>
-			<div class="col s12 m7 cooking-description">
-				<div class="description">
-					<h5>Cooking Instruction</h5>
-					<p>{{recipes.cooking_description}}</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	{%endblock%}
+                </li>
+                <li>
+                    <a href="{{url_for('edit_recipe',recipes_id=recipes._id)}}"
+                        class="btn-floating yellow darken-1"><i class="material-icons">mode_edit</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('add_recipe')}}"
+                        class="btn-floating green"><i class="material-icons">playlist_add</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="share">
+            <div class="share-div">
+                <h4>Share</h4>
+            </div>
+            <div class="share-links-container">
+                <ul class="share-links">
+                    <li>
+                        {{ share.create( sites='facebook, twitter,linkedin', mobile_sites='facebook, twitter,linkedin',addition_class='circle-around-social-links a' ) }}{{share.load() }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- desplayed the ingrediants required and method/description of cooking -->
+    <div class="col s12 search-result-bar-dish list-icon-dish">
+        <h5>
+            <i class="material-icons">done</i>
+            <span>{{recipes.recipe_name}}</span>
+        </h5>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col s12 m5 ingrediants-required">
+            <div class="ingrediants">
+                <h5>Ingrediants</h5>
+                <ul>
+                    {%for i in a%}
+                    <li class="order">{{i}}</li>
+                    {%endfor%}
+                </ul>
+            </div>
+        </div>
+        <div class="col s12 m7 cooking-description">
+            <div class="description">
+                <h5>Cooking Instruction</h5>
+                <p>{{recipes.cooking_description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}
