@@ -9,6 +9,9 @@
 	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css"/>
+  
 	<title>MS3 Recipe Web</title>
 </head>
 
@@ -30,7 +33,7 @@
 					<li class="nav-links"><a href="/index/Sea Food">SEA FOOD</a></li>
 					<li class="nav-links"><a href="/index/Salad">SALAD</a></li>
 					<li class="nav-links">
-						<a href="/index">All Recipes</a>
+						<a href="/index">ALL RECIPES</a>
 					</li>
 				</ul>
 			</div>
@@ -85,7 +88,6 @@
 					<h5>
 						<i class="fas fa-th-list"></i>
 						<span>{{category}}</span>
-						<i class="fas fa-th-list" {{hidden}}></i>
 						<span>{{all_recipes}}{{contact_us}}{{about_us}}</span>
 					</h5>
 				</div>
@@ -136,7 +138,7 @@
 		</div>
 		<div class="footer-copyright">
 			<div class="container">
-				© 2020 Copyrights reserved Rimantas 
+				© 2020 Rimantas 
 			</div>
 		</div>
 	</footer>
@@ -176,6 +178,29 @@
                     $("#count").css({ color: "green" }).text("Thank You ").hide(1000);
                 }
             });
+	
+      
+			$('#b4').click(function(event) {
+			event.preventDefault();
+			swal({
+			title: "Are you sure?",
+			text: "Once deleted, you will not be able to recover the recipe!",
+			icon: "warning",
+			buttons: true,
+			dangerMode: true,
+			})
+			.then((willDelete) => {
+			if (willDelete) {
+			swal("Your recipe has been deleted!", {
+			icon: "success",
+            });
+				window.location = $(this).attr('href');
+			} else {
+			swal("Your recipe is safe!");
+			}
+			});
+            });
+           
 	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>

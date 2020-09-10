@@ -1,15 +1,16 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import os
-from flask import Flask, flash, render_template, redirect, request, \
-    url_for
-from flask_pymongo import PyMongo
-from bson.objectid import ObjectId
-from flask_share import Share
 from datetime import datetime, timedelta
+from bson.json_util import dumps, loads
+import json
 import humanize
-from flask_paginate import Pagination, get_page_parameter, get_page_args
-from flask import Blueprint
+from bson.objectid import ObjectId
+from flask import (Blueprint, Flask, flash, redirect, render_template, request,
+                   url_for)
+from flask_paginate import Pagination, get_page_args, get_page_parameter
+from flask_pymongo import PyMongo
+from flask_share import Share
 
 mod = Blueprint('users', __name__)
 app = Flask(__name__)
@@ -36,7 +37,7 @@ def get_tasks():
     per_page = 4
     offset = (page - 1) * per_page
     recipe = mongo.db.recipe.find().sort('date', -1).skip(offset).limit(per_page)
-    
+     
     pagination = Pagination(
         page=page,
         total=recipe.count(),

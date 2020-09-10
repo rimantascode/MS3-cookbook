@@ -15,9 +15,11 @@
 				</a>
 				<ul>
 					<li>
+                    <button>
 						<a href="{{url_for('delete_recipe',recipes_id=recipes._id)}}"
 							class="btn-floating red"><i class="material-icons">delete_forever</i>
                         </a>
+                        </button>
 					</li>
 					<li>
 						<a href="{{url_for('edit_recipe',recipes_id=recipes._id)}}"

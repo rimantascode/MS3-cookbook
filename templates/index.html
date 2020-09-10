@@ -8,6 +8,7 @@
 <div class="ca">
 	<div class="row">
 		<div class="search-results-list">
+			<div id="demo"></div>
 			<div class="z-depth-2">
 				<div class="row">
 					<div class="col m5 l5 card-image">
@@ -59,8 +60,9 @@
 							</div>
                             <!-- Edit, delete, see resipe buttons-->
 							<div class="buttons">
-								<a href="{{url_for('delete_recipe',recipes_id=ingrediants._id)}}"
+								<a id="b4" href="{{url_for('delete_recipe',recipes_id=ingrediants._id)}}" 
 									class="waves-effect waves-light btn btn_small red xx">DELETE</a>
+                                
 								<a href="{{url_for('edit_recipe',recipes_id=ingrediants._id)}}"
 									class="waves-effect waves-light btn btn_small lighten-2 xx">Edit</a>
 								<a href="{{url_for('dish',recipes_id=ingrediants._id)}}"

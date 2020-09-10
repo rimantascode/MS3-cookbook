@@ -55,6 +55,9 @@ nav {
 .picture-area img {
   display: block;
   margin: auto;
+  height: 600px !important;
+  object-fit: cover;
+  width: 100%;
 }
 
 /* ------------------------------------------------ home page and search results  ----- */
@@ -240,7 +243,7 @@ p.ingrediants-on-the-card {
   position: relative;
   height: 3.6em; 
 }
-/*end of css-tricks.com */
+
 .fade:after {
   content: "";
   text-align: right;
@@ -251,6 +254,7 @@ p.ingrediants-on-the-card {
   height: 1.2em;
   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
 }
+ /*end of css-tricks.com */
 
 
 /* ------------------------------------------------ add button and share links ----- */
