@@ -166,8 +166,7 @@ def update_recipe(recipes_id):
         'category': request.form.get('category'),
         'date': x,
         })
-    return redirect(url_for('get_tasks'))
-
+    return redirect(url_for('dish',recipes_id=recipes_id))
 
 # delets the recipe
 @app.route('/delete_recipe/<recipes_id>')

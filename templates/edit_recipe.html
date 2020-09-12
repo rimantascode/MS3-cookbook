@@ -2,6 +2,11 @@
 <!--Edit Recipe-->
 <h3>Edit Recipe</h3>
 <div class="row">
+<div class="col s12 container picture-area picture-area-dish">
+	{% for images in image %} {% if images.picture_url==recipes.picture_url%}
+	<img class="responsive-img" src="{{recipes.picture_url}}" />
+    {%endif%} {%endfor%}
+</div>
     <!--form-->
     <form action="{{ url_for('update_recipe', recipes_id=recipes._id) }}" method="POST" class="col s12">
         <div class="row">
