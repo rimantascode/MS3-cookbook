@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5f365ebcd566b653c9a2960f"},"name":"Poultry"}
+{"_id":{"$oid":"5f365f06d566b653c9a29610"},"name":"Red Meat"}
+{"_id":{"$oid":"5f365f36d566b653c9a29611"},"name":"Pork"}
+{"_id":{"$oid":"5f365f40d566b653c9a29612"},"name":"Sea Food"}
+{"_id":{"$oid":"5f47e4ed80871dab71f98b36"},"name":"Salad"}
