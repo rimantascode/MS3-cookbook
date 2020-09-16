@@ -32,28 +32,31 @@ the Free Software Foundation, either version 3 of the License, or
 
 
 
-
 ## User Stories
 
-When the user lands in the page he sees all of the recipies added.
+User stories shaped my idea how to create this project. 
 
-The user can use the navigation to filter the search results.
+As a website owner,
+I want to manage the recipes easily and quickly so that I would include the function like add, edit, or delete and opportunity to share the the new recipes in the social media with few clicks.  
 
-the search results are displayed in cards and contains two buttons - View The Recipe - and - Edit.
+As a visitor of the website, I am happy that the main information is displayed, and it easy to read.
 
-when the users click on View The Recipe in another page in detail. The requireded and the cooking instruktion will be desplayed. In the right bottom corner us a float button giving an apportunity ti delete, edit, or add a new recipe.
+As a person who is always thinking what to make for dinner,
+I like to see what is possible to cook from the stuff in the fridge, so I would not need to run to the store. It is easy to navigate and find the recipe by the main ingredient: the type of the meat. 
 
-The users also are able to edit the existing recipe by clickig edit button straight on the card.
+As a user of the recipes websites, 
+I do not like to read a lot, so big and clear picture gives me an impression what then dish would be like. 
+
 
 ---
 
-## Design
+## Dsign Proccess
 
-- The navigation was used from materialize website, as it functioning well on smaller devices and bigger screens.
-- The layout of the main page consist of the picture area, in landing page it displayes the general picture with a lot of recipes on the page. When the recipee is viewed than the appropriate picture takes the place. The design like this is consistant and the user do not need to learn how to use it. Down below is a float botton to add the recipe and on the appoiste side share button to allow the user share the recipe/recipes in the Social Media.
-- The next pannel has displays the informamtion what is it going to be desplayed, and the title channges in the name of the recipe, when the recipe is view in details. It keeps the information tidy for the user convieniance.
-- Down below the recipes are displayed in the cards as search results. First I designed to be displayed a bit differently, but designed it as it is now, because I believe that the picture is worth hundred of words, the size it is displayed make a good cence of the dish. The card it self contains easy diegestible, and usefull information in first glance which might lever the dicision to click the particular recipe.
-- At the end of the page we have a footer with links to social media, about us page and contact us page.
+1. **Strategy plane:** There are a  lot of recipes websites, but I wanted to create my own app which would be not overloaded with information, and have a unique design, because this project is B2C. And this a good opportunity to get more famiar with flask micro-framework. 
+2. **Scope plane:** When I run through all ideas and user stories I started to realise how the website should look like and how the the recipes would have to be displayed for the users. It has to have a navigation bar at he top and which would have mobile responsive. The big picture of the main page and also big picture when the recipe would be seen in detail. The recipes would be displayed in the cards format, with sensitive information, such as how would it take to cook and how difficult it is, what ingredients will the user need in order to cook with add, edit and delete functions. The footer with the links to the social media about as and contact as form. I added the few more features in the end of project such as pagination and how old is the recipe in order to keep the newest visible first. 
+3. **Structure plane:** So when the decision was made of what features I will need, started to group the features. The user will land in the main page or in one of the categories. Decided to have a header in in which would be navigation with the categories, the picture area in in the main page. The main picture with a lot of dishes on the table. Add button and share links beneath. And this part would stay the same all the time. Once clicked on of the categories the information from mongoDB would be pulled out and the results are displayed in the cards with appropriate information. In the cards they would be able go to add, edit, or dish pages.This type of design is ease learnable very easy to navigate no more than three click to reach the destination. 
+4. **Skeleton plane:** Once the structure plane is in place,  started to put all together by using Figma. Added 5 categories of the main ingredients. The user can get the results only related to the category - the main ingredient. Add button takes the user to the add recipe page which consists of the header and a form, once filled up and meats all requirements can be submitted. When the visitor click on on the categories the cards appear( as you can see in the mock-up I changed the the size of the cards and how is the picture displayed). The user can see the picture on the left side of the card and the information on the right side. The name of the recipe ,the cooking time and the difficulty level is displayed and the majority of the ingredients required are also displayed. Down below three buttons delete, edit , and see the recipe in detail. Edit page will keep the same structure. The navigation, hero image add button and share links In place, but beneath there is a form which can be edited and the button update recipe. Once the button clicked the user will be taken to dish.html page to review the changes. In the dish page there is a float button with delete, edit, and add recipe functions to let the user do with the recipe what he wants straight way. 
+5. **Surface plane:** When the skeleton plane was in place. Decided to do a research on what colours can make the people hungry? There were a lot of opinions, so narrowed down too much the colours. From Google fonts choose the fonts and finished the design. the footer took from materializesss and added the same color as navigatio. 
 
 - **About Us** simple page with a picture and some text about the project.
 - **Contact Us** the design of this page remains simple containing a form, and once it is filled up and meets the requirements can be submited and the user will get a feedback whether it was successfully sent or not.
@@ -61,24 +64,31 @@ The users also are able to edit the existing recipe by clickig edit button strai
 * Colour scheme consists of few colours, was used website to blend the colors.
   ##############################################################################
   (https://meyerweb.com/eric/tools/color-blend/#:::hex)
-  - ![#f7f7f7](https://placehold.it/15/f7f7f7/000000?text=+) `#f7f7f7`
-  - ![#964600](https://placehold.it/15/964600/000000?text=+) `#964600`
-  - ![#666666](https://placehold.it/15/666666/000000?text=+) `#666666`
-  - ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) `#ffffff`
-  - ![#f5f5dc](https://placehold.it/15/f5f5dc/000000?text=+) `#f5f5dc`
-  - ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `#ff9900`
-  - ![red](https://placehold.it/15/red/000000?text=+) `red`
-  - ![#edebeb](https://placehold.it/15/edebeb/000000?text=+) `#edebeb`
-  - ![black](https://placehold.it/15/black/000000?text=+) `black`
-  - ![#008464 ](https://placehold.it/15/008464/000000?text=+) `#008464`
-  - ![#0761afb3](https://placehold.it/15/0761afb3/000000?text=+) `#0761afb3`
-  - ![#ec373780](https://placehold.it/15/ec373780/000000?text=+) `#ec373780`
-  - ![#6aa6ed](https://placehold.it/15/6aa6ed/000000?text=+) `#6aa6ed`
+- ![#f7f7f7](https://placehold.it/15/f7f7f7/000000?text=+) `#f7f7f7`
+- ![#964600](https://placehold.it/15/964600/000000?text=+) `#964600`
+- ![#666666](https://placehold.it/15/666666/000000?text=+) `#666666`
+- ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) `#ffffff`
+- ![#f5f5dc](https://placehold.it/15/f5f5dc/000000?text=+) `#f5f5dc`
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `#ff9900`
+- ![#ff0000](https://placehold.it/15/ff0000/000000?text=+) `red`
+- ![#edebeb](https://placehold.it/15/edebeb/000000?text=+) `#edebeb`
+- ![#000000](https://placehold.it/15/000000/000000?text=+) `black`
+- ![#008464 ](https://placehold.it/15/008464/000000?text=+) `#008464`
+- ![#0761afb3](https://placehold.it/15/0761afb3/000000?text=+) `#0761afb3`
+- ![#ec373780](https://placehold.it/15/ec373780/000000?text=+) `#ec373780`
+- ![#6aa6ed](https://placehold.it/15/6aa6ed/000000?text=+) `#6aa6ed`
+- ![#f44336](https://placehold.it/15/f44336/000000?text=+) `materializecss red class`
+- ![#26a69a](https://placehold.it/15/26a69a/000000?text=+) `materializecss lighten-2 class`
+- ![#4CAF50](https://placehold.it/15/4CAF50/000000?text=+) `materializecss green class`
+
+
+
+
 
 
 ## Typography
 
-- fonts used throughout the website
+- Fonts used throughout the website
 font-family: "Permanent Marker", cursive
 font-family: "Roboto", sans-serif
 
@@ -106,7 +116,8 @@ Features planned, implemented and outlined for later development
 - Contact Form
 - Git - Version Control System
 - GitHub - Remote Repository
-- Deployed - Hosted on Github Pages
+- Hosted - on Heroku
+- Deployed - On Github. 
 
 ### Existing Features
 
@@ -120,7 +131,10 @@ Features planned, implemented and outlined for later development
 - Accesibility
 - Gitpod - Version Control System
 - GitHub - Remote Repository
-- Deployed - Hosted on Github Pages
+- Hosted - on Heroku
+- Deployed - On Github. 
+- Age - tells how old is recipe.
+- Pagination - added pagination for more convieant search and also it reduces page loading time.
 
 ### Features Left to Implement/fix
 
@@ -157,7 +171,7 @@ This project makes use of:
   - Testing responsiveness of the website **Am I Responsive**
 - [Figma](https://www.figma.com/)
   - used to make a mockup
-- All the labraries including the flask micro Framework have to installed. All of them is listed in the requirements.txt, how to install please Deployment section.
+- All the labraries including the flask micro Framework have to be installed. All of them is listed in the requirements.txt, how to install please see Deployment section.
 
 
 ### Manual Testing
@@ -167,12 +181,12 @@ This project makes use of:
 - share links all works it is easy to share the website. 
 - pagianton works, it desplays 4 recipes per page.
 - The feature the time of period when the recipe was added works, and tested by adding a new recipe. 
-- DELETE, EDIT, SEE buttons work and the card, tested manualy at takes to the correct page.
+- DELETE, EDIT, SEE buttons work on the card, tested manualy and takes to the correct page.
 - links in footer work, takes to the correct pages.
 
 ### Code Validation
 
-To validate the my CSS and HTML code I used [https://validator.w3.org/](https://validator.w3.org/) 
+To validate my CSS and HTML code I used [https://validator.w3.org/](https://validator.w3.org/) 
 
 To validate the PYTHON3 code [http://pep8online.com/ch/eckresult](http://pep8online.com/ch/eckresult) 
 
@@ -197,12 +211,9 @@ The process involved:
 
 To deploy your own version of the website:
 
-- Have git installed
-- Visit the [repository](https://github.com/rimantascode/MS3-cookbook)
-- Click 'Clone or download' and copy the code for http
 - Open a terminal in your root directory
 - Type 'git clone ' followed by the code taken from github repository
-- `git@github.com:rimantascode/MS3-cookbook.git`
+- `https://github.com/rimantascode/MS3-cookbook.git`
 - You will need to install requirements.txt by typing in the terminal pip3 install -r requirements.txt
 
 - When this completes you have your own version of the website
