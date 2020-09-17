@@ -203,21 +203,51 @@ Used Google Chrome, Opera, Mozila firefox browser to test the responsiveness, it
 
 The process involved:
 
-- Host a git repository on GitHub. Explained [here](https://help.github.com/en/articles/create-a-repo).
-- The root folder contains README.md and index.html files
+- In project you have to use Code instite tempale [here](https://github.com/Code-Institute-Org/gitpod-full-template).
+- Click the green button "use this template" 
+- How to create a new repository [here](https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo) , but in this case enter the title of the project, the description, choose privet or poblic, and click create repository from template. 
 - On GitHub repository settings page move to GitHub Pages section
 - Change source to master branch. (Or any desired branch)
-- Provided link will be your projects home (index) page.
 
-To deploy your own version of the website:
-
-- Open a terminal in your root directory
+- Once the the workspace is ready:
+- In a terminal, in your root directory
 - Type 'git clone ' followed by the code taken from github repository
 - `https://github.com/rimantascode/MS3-cookbook.git`
-- You will need to install requirements.txt by typing in the terminal pip3 install -r requirements.txt
+- for exampel `git clone https://github.com/rimantascode/MS3-cookbook.git`
+- You need to install requirements.txt by typing in the terminal 
+- `pip3 install -r requirements.txt`
 
-- When this completes you have your own version of the website
-  - Feel free to make any changes to it
+- create the database in [mongoDB](https://www.mongodb.com/) as it shown in the picture. cook_book is database, and categories, difficulty, prep_time, recipe are  the collections.
+- ![mongoDB structure](source/mongoDB.png)
+
+- create an enviroment variable in gitpod settings,[gitod settings](https://gitpod.io/settings/)
+
+- ![Environment Variable](source/MONGO_URI.jpg)
+- value is equel:
+mongodb+srv://<username>:<password>@<cluster_name>-ocous.mongodb.net/<database_name>?retryWrites=true&w=majority
+- Organization/Repository: is your GitHub **username**
+- Also you need to create the **SECRET_KEY** environment variables value can be anythingdo just do **not** do simple, like 1234 
+- ![SECRET_KEY](source/SECRET_KEY.jpg)
+- upgrade pip version by typing in the terminal 
+
+###### IMPORT COLLECTIONS IN TO mongoDB
+
+- Now we need to import the data into the collections
+
+mongoimport --uri mongodb+srv://<USERNAME>:<PASSWORD>@<cluster_name>/<DATABASE> --collection categories --type json --file categories.json
+
+mongoimport --uri mongodb+srv://<USERNAME>:<PASSWORD>@<cluster_name>/<DATABASE> --collection difficulty --type json --file difficulty.json
+
+ongoimport --uri mongodb+srv://<USERNAME>:<PASSWORD>@<cluster_name>/<DATABASE> --collection prep_time --type json --file prep_time.json
+
+mongoimport --uri mongodb+srv://<USERNAME>:<PASSWORD>@<cluster_name>/<DATABASE> --collection recipe --type json --file recipes.json
+
+- type in terminal
+- `python3 app.py`
+
+It is ready to use. 
+
+- Feel free to make any changes to it
 - The website can be run by opening one of the HTML files within a web browser
 - Visit the link provided
 - Your website with any made changes will appear
@@ -226,6 +256,11 @@ To deploy your own version of the website:
 The benefits of hosting your website on GitHub pages is that any pushed changes to your project will automatically update the website. Development branches can be created and merged to the master when complete.
 
 It may take a moment for changes to appear on the hosted website.
+
+## Deploy to Heroku
+
+
+
 
 ## Credits
 
