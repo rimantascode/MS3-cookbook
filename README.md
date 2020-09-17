@@ -263,14 +263,14 @@ mongodb+srv://<username>:<password>@<cluster_name>-ocous.mongodb.net/<database_n
 
 
 ## Credits
-Thank you.
- - [Waitrose.com](https://www.waitrose.com/content/waitrose/en/home/recipes/recipe_directory/b/breaded_chicken_andwatercresssalad.html#_) - used the recipes, and the pictures for learnign and demonstrative porposes only. Once the project will be assested all data will be deleted.
+- Thank you.
+- [Waitrose.com](https://www.waitrose.com/content/waitrose/en/home/recipes/recipe_directory/b/breaded_chicken_andwatercresssalad.html#_) - used the recipes, and the pictures for learnign and demonstrative porposes only. Once the project will be assested all data will be deleted.
 
- Thank you.
+- Thank you.
 - [css tricks](https://css-tricks.com/line-clampin/) for a piece of code made to look my text very nice faded out.
 Thank you.
 - [photo](https://www.flickr.com/photos/dennis/102679650
-https://live.staticflickr.com/32/102679650_cd10235c8f_k_d.jpg) for very nice picture. 
+https://live.staticflickr.com/32/102679650_cd10235c8f_k_d.jpg) for very nice picture.)
 
 
 ### Acknowledgements
