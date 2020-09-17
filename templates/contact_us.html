@@ -12,7 +12,7 @@
 </ul>
 {% endif %} {% endwith %} {% block body %}{% endblock %}
 <!-- form-->
-<form action="{{url_for('contact_us_form')}}" method="POST" onsubmit="return sendEmail(this);" class="col s12">
+<form  method="POST" onsubmit="return sendEmail(this);" action="{{url_for('contact_us_form')}}" class="col s12">
 	<div class="row">
 		<div class="input-field col s6">
 			<input type="text" class="validate" name="first_name" id="first_name" required />
