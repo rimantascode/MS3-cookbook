@@ -10,6 +10,7 @@
     <!--form-->
     <form action="{{ url_for('update_recipe', recipes_id=recipes._id) }}" method="POST" class="col s12">
         <div class="row">
+            <!-- difficulty level-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix selects">build</i>
@@ -26,6 +27,7 @@
                 </div>
             </div>
             <div class="row">
+                <!-- category-->
                 <div class="input-field col s12">
                     <i class="material-icons prefix selects">sort</i>
                     <label class="for-select-label" for="category" >Category</label>
@@ -39,6 +41,7 @@
                     </select>
                 </div>
             </div>
+            <!--how long it takes to cook-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix selects">timer</i>
@@ -53,6 +56,7 @@
                     </select>
                 </div>
             </div>
+            <!--The name of the recipe-->
             <div class="input-field col s12">
                 <i class="material-icons prefix">assignment</i>
                 <label for="icon_prefix">Recipe Name</label>
@@ -60,6 +64,7 @@
                 <span id="count"></span>
             </div>
         </div>
+        <!--Ingrediants-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">blur_on</i>
@@ -67,6 +72,7 @@
                 <textarea name="ingrediants" id="ingrediants" class="materialize-textarea txt-area" value="{{recipes.ingrediants}}" required>{{recipes.ingrediants}}</textarea>
             </div>
         </div>
+        <!-- Cooking instructions-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">subject</i>
@@ -82,6 +88,7 @@
                 <label for="picture_url">Place picture URL</label>
             </div>
         </div>
+        <!--Submit button-->
         <div class="row">
             <button class="btn waves-effect waves-light" type="submit" name="action" id="update">Update Recipe
             <i class="material-icons right">playlist_add</i>

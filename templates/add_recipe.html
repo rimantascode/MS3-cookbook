@@ -2,8 +2,10 @@
 <!-- Add Recipe-->
 <h3>Add Recipe</h3>
 <div class="row">
+    <!--form-->
     <form action="{{ url_for('insert_recipe')}}" method="POST" class="col s12">
         <div class="row">
+            <!--difficulty level-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix selects">build</i>
@@ -16,6 +18,7 @@
                     </select>
                 </div>
             </div>
+            <!--category-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix selects">sort</i>
@@ -28,6 +31,7 @@
                     </select>
                 </div>
             </div>
+            <!-- how long it takes to prepare the food-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix selects">timer</i>
@@ -40,6 +44,7 @@
                     </select>
                 </div>
             </div>
+            <!-- the name of the recipe-->
             <div class="input-field col s12">
                 <i class="material-icons prefix">assignment</i>
                 <label for="recipe_name">Recipe Name</label>
@@ -47,6 +52,7 @@
                 <span id="count"></span>
             </div>
         </div>
+        <!--Ingrediants. the ingrediants have to be seperated by commas-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">blur_on</i>
@@ -54,6 +60,7 @@
                 <label for="ingrediants">Ingrediants</label>
             </div>
         </div>
+        <!--the insruction how to cook-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">subject</i>
@@ -67,6 +74,7 @@
                 <label for="cooking_description"> Recipe Coking Instructions</label>
             </div>
         </div>
+        <!-- image url-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">photo</i>
@@ -74,6 +82,7 @@
                 <label for="picture_url">Place picture URL</label>
             </div>
         </div>
+        <!-- submit button-->
         <div class="row">
             <button class="btn waves-effect waves-light" type="submit" id="add_recipe" name="action">
             Add Recipe
