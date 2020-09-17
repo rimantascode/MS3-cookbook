@@ -166,7 +166,7 @@ Features planned, implemented, and outlined for later development.
 - The contact form works, please see what time the screenshots were taken.
 - [before-sent](source/before-sent.png)
 - [after-sent](source/before-sent.png)
-- [mail-box](source/before-sent.png)
+- [mail-box](source/mail-box.png)
 
 ### Code Validation
 
