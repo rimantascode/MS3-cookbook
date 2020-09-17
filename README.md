@@ -1,9 +1,9 @@
 # Milestone Project 3
 
 
-# Recipes Website
+# No-Hunger  
 
-Dynamic RECIPES WEBSITE with an interctive design which contains from fron-end and back-end giving the ability to add, edit, update, delete the recipes simply and easy, just filling the form, or modifyieng the form. It ueses mongoDB and written using Flask Micro Framework, HTML5, CSS3, jQuery, Javascript
+Dynamic reicpes with an interactive design which contains from front-end and back-end with the abilities to add, edit, update, delete the recipes simply and easy, just filling the form, or modifyieng the form. It ueses mongoDB and written using Flask Micro Framework, HTML5, CSS3, jQuery, Javascript
 Hosted on [Heroku](https://cookbook-ms3.herokuapp.com/)
 Repository on [GitHub](https://github.com/rimantascode/MS3-cookbook)
 
@@ -19,17 +19,6 @@ the Free Software Foundation, either version 3 of the License, or
 # UX
 
 ![Responsive Views of Home Page](source/responsive.png)
-
-## The Aim.
-
- - The main aim was to create the recipes website with clearly desplayed and  - easily diegstible information. 
-
- - To create an easy menageble website with an functions such as add, edit and delete the recipes. 
-
- - Let the users to filter the result by clicking the navigation category.
-
- - Keep the recipes in sorted by the date when it was added so the users could see the newest recipes. 
-
 
 
 ## User Stories
@@ -50,7 +39,7 @@ I do not like to read a lot, so big and clear picture gives me an impression wha
 
 ---
 
-## Dsign Proccess
+## Design Proccess
 
 1. **Strategy plane:** There are a  lot of recipes websites, but I wanted to create my own app which would be not overloaded with information, and have a unique design, because this project is B2C. And this a good opportunity to get more famiar with flask micro-framework. 
 2. **Scope plane:** When I run through all ideas and user stories I started to realise how the website should look like and how the the recipes would have to be displayed for the users. It has to have a navigation bar at he top and which would have mobile responsive. The big picture of the main page and also big picture when the recipe would be seen in detail. The recipes would be displayed in the cards format, with sensitive information, such as how would it take to cook and how difficult it is, what ingredients will the user need in order to cook with add, edit and delete functions. The footer with the links to the social media about as and contact as form. I added the few more features in the end of project such as pagination and how old is the recipe in order to keep the newest visible first. 
@@ -203,7 +192,7 @@ Used Google Chrome, Opera, Mozila firefox browser to test the responsiveness, it
 
 The process involved:
 
-- In project you have to use Code instite tempale [here](https://github.com/Code-Institute-Org/gitpod-full-template).
+- In this project you have to use Code instite tempale [here](https://github.com/Code-Institute-Org/gitpod-full-template).
 - Click the green button "use this template" 
 - How to create a new repository [here](https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo) , but in this case enter the title of the project, the description, choose privet or poblic, and click create repository from template. 
 - On GitHub repository settings page move to GitHub Pages section
@@ -213,8 +202,9 @@ The process involved:
 - In a terminal, in your root directory
 - Type 'git clone ' followed by the code taken from github repository
 - `https://github.com/rimantascode/MS3-cookbook.git`
-- for exampel `git clone https://github.com/rimantascode/MS3-cookbook.git`
-- You need to install requirements.txt by typing in the terminal 
+- for exampal `git clone https://github.com/rimantascode/MS3-cookbook.git`
+- Select all files and move out of the folder MS3-cookbook in the root directory. 
+- Install requirements.txt by typing in the terminal 
 - `pip3 install -r requirements.txt`
 
 - create the database in [mongoDB](https://www.mongodb.com/) as it shown in the picture. cook_book is database, and categories, difficulty, prep_time, recipe are  the collections.
@@ -228,24 +218,24 @@ mongodb+srv://<username>:<password>@<cluster_name>-ocous.mongodb.net/<database_n
 - Organization/Repository: is your GitHub **username**
 - Also you need to create the **SECRET_KEY** environment variables value can be anythingdo just do **not** do simple, like 1234 
 - ![SECRET_KEY](source/SECRET_KEY.jpg)
-- upgrade pip version by typing in the terminal 
 
-###### IMPORT COLLECTIONS IN TO mongoDB
+#### IMPORT COLLECTIONS INTO mongoDB
 
-- Now we need to import the data into the collections
+- Now we need to import the data into the collections.
+- Type in the terminal
 
-mongoimport --uri mongodb+srv://<USERNAME>:<PASSWORD>@<cluster_name>/<DATABASE> --collection categories --type json --file categories.json
+- `mongoimport --uri mongodb+srv://<USERNAME>:<PASSWORD>@<cluster_name>/<DATABASE> --collection categories --type json --file categories.json`
 
-mongoimport --uri mongodb+srv://<USERNAME>:<PASSWORD>@<cluster_name>/<DATABASE> --collection difficulty --type json --file difficulty.json
+- `mongoimport --uri mongodb+srv://<USERNAME>:<PASSWORD>@<cluster_name>/<DATABASE> --collection difficulty --type json --file difficulty.json`
 
-ongoimport --uri mongodb+srv://<USERNAME>:<PASSWORD>@<cluster_name>/<DATABASE> --collection prep_time --type json --file prep_time.json
+- `mongoimport --uri mongodb+srv://<USERNAME>:<PASSWORD>@<cluster_name>/<DATABASE> --collection prep_time --type json --file prep_time.json`
 
-mongoimport --uri mongodb+srv://<USERNAME>:<PASSWORD>@<cluster_name>/<DATABASE> --collection recipe --type json --file recipes.json
+- `mongoimport --uri mongodb+srv://<USERNAME>:<PASSWORD>@<cluster_name>/<DATABASE> --collection recipe --type json --file recipes.json`
 
 - type in terminal
 - `python3 app.py`
-
-It is ready to use. 
+- click on the blue button to open in the browser.
+- It is ready to use. 
 
 - Feel free to make any changes to it
 - The website can be run by opening one of the HTML files within a web browser
@@ -259,12 +249,39 @@ It may take a moment for changes to appear on the hosted website.
 
 ## Deploy to Heroku
 
-
+- You have to create a new app in [Heroku](https://dashboard.heroku.com/new-app)
+- give a unique name and choose a region to Europe.
+- a gave a neme of the app "testing-deploymenta" for testing porpuse.
+- click on settings, and then the button "Reveal Config Vars".
+- Enter MONGU_URI with value you used to create enviroment variable.
+- Enter SECRET_key with vlue you used to create enviroment variable.
+- PORT value is 5000.
+- IP vlaue is 0.0.0.0.
+- in the terminal
+- `heroku login -i` , and enter the credentials.
+- In the terminal, go to deploy section you will se the line similar to this .
+- `heroku git:remote -a testing-deploymenta`
+- create requirements.txt
+- `pip3 freeze > requirements.txt`
+- crate Prock file with a capital "P" this is a requirement.
+- ` echo web: python app.py > Procfile`- and then `git add` . and `git commit -m"added requirements.txt and Prock files" `
+- `git push heroku master`
+- once it pushed, in the terminal.
+- `heroku ps:scale web=1`
+- ready to use 
+- ` heroku open`
 
 
 ## Credits
+Thank you.
+ - [Waitrose.com](https://www.waitrose.com/content/waitrose/en/home/recipes/recipe_directory/b/breaded_chicken_andwatercresssalad.html#_) - used the recipes, and the pictures for learnign and demonstrative porposes only. Once the project will be assested all data will be deleted.
 
-### Media
+ Thank you.
+- [css tricks](https://css-tricks.com/line-clampin/) for a piece of code made to look my text very nice faded out.
+Thank you.
+- [photo](https://www.flickr.com/photos/dennis/102679650
+https://live.staticflickr.com/32/102679650_cd10235c8f_k_d.jpg) for very nice picture. 
+
 
 
 ### Acknowledgements
