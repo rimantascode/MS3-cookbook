@@ -1,5 +1,5 @@
 function sendEmail(contactForm) {
-    console.log("this is what I get",contactForm);
+   // console.log("this is what I get from the form ",contactForm);
      emailjs.send("service_65vy6qi", "holiday", 
      {"from_name":contactForm.first_name.value,
          "last_name":contactForm.last_name.value,
